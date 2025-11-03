@@ -1,63 +1,102 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yurabish</title>
-  <meta name="description" content="Ryusuke Shibata / Portfolio & Tech Notes." />
-  <meta property="og:title" content="Yurabish" />
-  <meta property="og:description" content="Portfolio, blog and experiments by Ryusuke Shibata." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico" />
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#60a5fa;
-      --radius:12px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-    body{background:linear-gradient(180deg,#071023 0%, #071428 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; padding:24px}
-    .wrap{max-width:900px;margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); box-shadow: 0 8px 30px rgba(2,6,23,0.6);}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041024;font-size:20px}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin:8px 0 18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
-    .card{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;min-height:84px}
-    a.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#041024;text-decoration:none;font-weight:600}
-    footer{margin-top:22px;color:var(--muted);font-size:13px}
-    @media (max-width:520px){ .logo{width:52px;height:52px;font-size:18px} h1{font-size:22px} }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>シンプルコーポレートサイト</title>
+    <link rel="canonical" href="https://popo-design.net/template/">
+<link rel="stylesheet" media="all" href="css/ress.min.css" />
+<link rel="stylesheet" media="all" href="css/style.css" />
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/style.js"></script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="img/favicon.png">
+    
 </head>
 <body>
-  <main class="wrap" role="main">
-    <header>
-      <div class="logo">YR</div>
-      <div>
-        <h1>Yurabish</h1>
-        <p class="lead">雑記です。日記とかゲーム感想とか勉強内容のまとめとか。</p>
-      </div>
+<header>    
+<div class="container">
+<div class="row">
+    <div class="col span-12">
+    <div class="head">
+        <h1><a href="index.html">SimpleCorp</a></h1>
+		<div class="telbox">TEL：00-0000-0000</div>
+        </div>
+    </div></div>
+<div class="row">
+    <div class="col span-12">
+        <nav>
+            <div id="open"></div>
+            <div id="close"></div>   
+            <div id="navi">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="subpage.html">店舗について</a></li>
+            <li><a href="subpage.html">サブページ</a></li>
+            <li><a href="subpage.html">サブページ</a></li>
+            <li><a href="subpage.html">サブページ</a></li>
+            <li><a href="subpage.html">お問い合わせ</a></li>
+            </ul>
+                </div>
+        </nav>
+    </div>
+        </div>
+    </div>
     </header>
-
-    <section class="grid" aria-label="Quick links">
-      <article class="card">
-        <strong>About</strong>
-        <p style="color:var(--muted);margin:8px 0 0">簡単な自己紹介などなど</p>
-      </article>
-
-      <article class="card">
-        <strong>Blog</strong>
-        <p style="color:var(--muted);margin:8px 0 0">思いついたものを思いついたときに</p>
-      </article>
-
-    </section>
-
+    <div class="mainimg">
+              <img src="img/mainimg.jpg" alt="メイン画像">
+        </div>
+    <main>
+<div class="container">
+<div class="row">
+    <div class="col span-8">
+    <div class="news">
+		<h2>新着情報</h2>
+		<ul>
+			<li>20XX.1.1　ここに新着情報のテキストが入ります</li>
+		    <li>20XX.1.1　ここに新着情報のテキストが入ります</li>
+		    <li>20XX.1.1　ここに新着情報のテキストが入ります</li>
+		    <li>20XX.1.1　ここに新着情報のテキストが入ります</li>
+		</ul>	
+		</div>
+    </div>
+	<div class="col span-4">
+		<a href=""><img src="img/banner.png" alt="バナー画像"></a>
+	    <a href=""><img src="img/banner.png" alt="バナー画像"></a>
+	    <a href=""><img src="img/banner.png" alt="バナー画像"></a>
+	</div>
+    </div>    
+        </div>
+    </main>
     <footer>
-      <small>© <span id="year"></span> Yurabish — Built with Cloudflare Pages</small>
+<div class="container">
+<div class="row">
+    <div class="col span-4">
+        <h5>フッター１</h5>
+        <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
+    </div>
+    <div class="col span-4">
+        <h5>フッター２</h5>
+        <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
+    </div>
+    <div class="col span-4">
+        <h5>フッター３</h5>
+        <p>© <span id="year"></span> Yurabish — Built with Cloudflare Pages</p>
+    </div>
+        </div>
+</div>
     </footer>
-  </main>
-
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    <div class="copyright">
+<div class="container">
+<div class="row">
+    <div class="col">
+    Copyright © <a href="https://popo-design.net" target="_blank">popodesign. </a>
+    
+    </div>    
+        </div>
+    </div>
+        </div>
+<p id="pagetop"><a href="#">TOP</a></p>    
 </body>
 </html>
