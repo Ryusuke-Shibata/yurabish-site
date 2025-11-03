@@ -112,3 +112,46 @@ footer {
     padding: 0 1em;
   }
 }
+
+/* プロフィールページ */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* スキルリスト */
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: var(--main-color);
+  color: white;
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  margin: 0.3em;
+  font-size: 0.9em;
+}
+
+/* ナビゲーションの現在ページを強調 */
+nav a.active {
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 2px;
+}
