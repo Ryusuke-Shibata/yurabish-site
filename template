@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タイトル | Sairy Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <section>
+      <h2>小見出し</h2>
+      <div class="profile">
+        <div class="profile-text">
+          <p>～～～～～～～～～～～～～</p>
+          <p>～～～～～～～～～～～～～</p>
+          <p>～～～～～～～～～～～～～</p>
+        </div>
+      </div>
+    </section>
+
+  <footer>
+    <p>&copy; 2025 Yurabish</p>
+  </footer>
+
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <noscript>
+    <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
+      JavaScriptが無効になっています。このサイトの一部機能が動作しない場合があります。
+    </div>
+  </noscript>
+
+</body>
+</html>
