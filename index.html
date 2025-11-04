@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sairy Hub</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-
-  <header>
-    <h1>Sairy Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="about.html">プロフィール</a></li>
-        <li><a href="blog.html">ブログ</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main>
     <section>
       <h2>ようこそ！</h2>
@@ -39,5 +28,13 @@
     <p>© <span id="year"></span> Yurabish — Built with Cloudflare Pages</p>
   </footer>
 
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
 </body>
+
 </html>
