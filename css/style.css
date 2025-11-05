@@ -192,3 +192,66 @@ nav a.active {
   margin-top: 0.5rem;
   color: #444;
 }
+
+/* ブログ記事の基本レイアウト */
+.blog-post {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+/* タイトルやメタ情報 */
+.post-header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+.post-title {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* 本文の装飾 */
+.post-content h2 {
+  border-left: 4px solid var(--main-color);
+  padding-left: 0.5em;
+  margin-top: 1.5em;
+}
+
+.post-content h3 {
+  margin-top: 1em;
+  color: var(--main-color);
+}
+
+.post-content blockquote {
+  background: #f7f7f7;
+  border-left: 4px solid var(--main-color);
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  color: #555;
+}
+
+.post-content pre {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 0.8em;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+/* タグ */
+.tag {
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.2em 0.6em;
+  margin-right: 0.3em;
+  font-size: 0.85em;
+}
