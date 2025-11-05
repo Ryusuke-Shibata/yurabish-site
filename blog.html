@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sairy Hub | Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="blog-list">
+    <h1>Blog</h1>
+    <p>気ままに書き散らすノートのようなブログです。</p>
+
+    <section class="posts">
+      <article class="post">
+        <h2><a href="blog/post1.html">はじめての投稿</a></h2>
+        <p class="date">2025-11-03</p>
+        <p class="excerpt">このブログの目的と作り方についてまとめました。</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="blog/post2.html">HTMLのちょっとしたコツ</a></h2>
+        <p class="date">2025-11-02</p>
+        <p class="excerpt">最近よく使うタグやレイアウトの工夫についてメモ。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Yurabish — Built with Cloudflare Pages</p>
+  </footer>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+  </script>
+
+  <noscript>
+    <p>JavaScriptが無効なため、ヘッダーが表示されません。</p>
+  </noscript>
+</body>
+</html>
