@@ -1,6 +1,6 @@
-/* ベース設定 */
+/* CSS変数の定義 */
 :root {
-  --main-color: #0078d4; /* アクセントカラー */
+  --main-color: #0078d4;
   --text-color: #333;
   --bg-color: #f8f9fa;
   --card-bg: #fff;
