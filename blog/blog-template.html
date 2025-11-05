@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記事タイトル | Sairy Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- 共通ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- 記事本体 -->
+  <main class="blog-post">
+    <article>
+      <header class="post-header">
+        <h1 class="post-title">記事タイトル</h1>
+        <div class="post-meta">
+          <time datetime="2025-11-03">2025年11月3日</time>
+          <span class="category">カテゴリー名</span>
+        </div>
+      </header>
+
+      <section class="post-content">
+        <p>ここに本文を記述します。段落をいくつも書いてOKです。</p>
+
+        <h2>小見出し</h2>
+        <p>本文の例：この部分では学んだことや感想などを自由に記述できます。</p>
+
+        <blockquote>
+          引用や重要なメモを入れる場合はこのように書きます。
+        </blockquote>
+
+        <h3>サブトピック</h3>
+        <p>コードを含める例：</p>
+        <pre><code>console.log("Hello, world!");</code></pre>
+      </section>
+
+      <footer class="post-footer">
+        <p>タグ: <span class="tag">Web開発</span> <span class="tag">HTML</span></p>
+      </footer>
+    </article>
+  </main>
+
+  <!-- 共通フッター -->
+  <footer>
+    <p>© <span id="year"></span> Yurabish — Built with Cloudflare Pages</p>
+  </footer>
+
+  <!-- header.htmlの読み込み -->
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+
+    // フッターの年を自動更新
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JSが無効な場合 -->
+  <noscript>
+    <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
+      JavaScriptが無効になっています。このサイトの一部機能が動作しない場合があります。
+    </div>
+  </noscript>
+</body>
+</html>
