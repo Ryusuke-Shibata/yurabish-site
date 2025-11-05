@@ -6,25 +6,15 @@
   <title>Sairy Hub | Blog</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <div id="header-placeholder"></div>
+
   <main class="blog-list">
     <h1>Blog</h1>
     <p>気ままに書き散らすノートのようなブログです。</p>
 
-    <section class="posts">
-      <article class="post">
-        <h2><a href="blog/post1.html">はじめての投稿</a></h2>
-        <p class="date">2025-11-03</p>
-        <p class="excerpt">このブログの目的と作り方についてまとめました。</p>
-      </article>
-
-      <article class="post">
-        <h2><a href="blog/post2.html">HTMLのちょっとしたコツ</a></h2>
-        <p class="date">2025-11-02</p>
-        <p class="excerpt">最近よく使うタグやレイアウトの工夫についてメモ。</p>
-      </article>
+    <section class="posts" id="post-list">
+      <!-- ここに記事が自動で入る -->
     </section>
   </main>
 
@@ -32,14 +22,37 @@
     <p>&copy; Yurabish — Built with Cloudflare Pages</p>
   </footer>
 
-  <script>
+<script>
+    // ヘッダー読み込み
     fetch("header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    // 記事一覧読み込み
+    fetch("blog/posts.json")
+      .then(res => res.json())
+      .then(posts => {
+        const container = document.getElementById("post-list");
+        posts.forEach(post => {
+          const article = document.createElement("article");
+          article.classList.add("post");
+          article.innerHTML = `
+            <h2><a href="${post.url}">${post.title}</a></h2>
+            <p class="date">${post.date}</p>
+            <p class="excerpt">${post.excerpt}</p>
+          `;
+          container.appendChild(article);
+        });
+      })
+      .catch(err => {
+        document.getElementById("post-list").innerHTML =
+          "<p>記事を読み込めませんでした。</p>";
+        console.error(err);
+      });
   </script>
 
   <noscript>
-    <p>JavaScriptが無効なため、ヘッダーが表示されません。</p>
+    <p>JavaScriptが無効なため、記事一覧を表示できません。</p>
   </noscript>
 </body>
 </html>
