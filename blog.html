@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sairy Hub | Blog</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -24,12 +24,12 @@
 
 <script>
     // ヘッダー読み込み
-    fetch("header.html")
+    fetch("/header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header-placeholder").innerHTML = data);
 
     // 記事一覧読み込み
-    fetch("blog/posts.json")
+    fetch("/blog/posts.json")
       .then(res => res.json())
       .then(posts => {
         const container = document.getElementById("post-list");
