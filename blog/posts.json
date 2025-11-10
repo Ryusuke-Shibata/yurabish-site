@@ -1,14 +1,15 @@
+
 [
+    {
+    "title": "#2",
+    "date": "2025-11-02",
+    "excerpt": "～～～～～～～～～～～～～",
+    "url": "blog/post2.html"
+  },
   {
     "title": "自己紹介（詳しめ）",
     "date": "2025-11-03",
     "excerpt": "プロフィールページよりも少し細かい自己紹介です。",
     "url": "blog/post1.html"
-  },
-  {
-    "title": "#2",
-    "date": "2025-11-02",
-    "excerpt": "～～～～～～～～～～～～～",
-    "url": "blog/post2.html"
   }
 ]
