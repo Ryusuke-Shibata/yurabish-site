@@ -37,7 +37,7 @@
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
       });
-    fetch("/posts.json")
+    fetch("blog/posts.json")
     .then(response => response.json())
     .then(posts => {
       const list = document.getElementById("recent-posts-list");
