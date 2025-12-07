@@ -2,21 +2,21 @@
 [
         {
     "title": "MS-900学習ログ #1",
-    "url": "blog/te/251121-te-ms900_01.html"
+    "url": "/blog/te/251121-te-ms900_01.html"
     "date": "2025-11-21",
     "sammary": "MS-900の学習まとめ、第1弾です。",
     "category": "ホビー"
   },
     {
     "title": "個人サイト開設までの道のり",
-    "url": "blog/te/251112-te-site_open.html"
+    "url": "/blog/te/251112-te-site_open.html"
     "date": "2025-11-12",
     "summary": "個人サイト開設の備忘です。",
     "category": "技術"
   },
   {
     "title": "自己紹介（詳しめ）",
-    "url": "blog/lf/251103-lf-about_me.html"
+    "url": "/blog/lf/251103-lf-about_me.html"
     "date": "2025-11-03",
     "summary": "プロフィールページよりも少し細かい自己紹介です。",
     "category": "生活・日記"
