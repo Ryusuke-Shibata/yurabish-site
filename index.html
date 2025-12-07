@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang = "ja">
 
 <!-- ページ全体の定義 -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset = "UTF-8" />
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
   <title>Sairy Hub</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel = "stylesheet" href = "/css/style.css" />
 </head>
 
 <!-- 本文 -->
 <body>
-  <div id="header"></div>
+  <div data-include="/components/header.html"></div>
   <main>
     <!-- セクション（見出しとセット） -->
     <section>
@@ -26,12 +26,10 @@
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Yurabish — Built with Cloudflare Pages</p>
-  </footer>
+  <div data-include="/components/footer.html"></div>
 
   <!-- JavaScriptコードの埋め込み -->
-  <script src="/js/include.js"></script>
+  <script src="/js/include.js" defer></script>
   <!--
   <script>
     fetch("/header.html")
