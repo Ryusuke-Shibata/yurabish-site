@@ -10,7 +10,7 @@
 
 <body>
   <!-- 共通ヘッダー -->
-  <div id="header-placeholder"></div>
+  <div data-include="/components/header.html"></div>
 
   <!-- 記事本体 -->
   <main class="blog-post">
@@ -88,9 +88,7 @@
         </p>
       </section>
 
-      <footer class="post-footer">
-        <p>タグ: <span class="tag">game</span> <span class="tag">playlog</span></p> <span class="tag">adv</span></p>
-      </footer>
+      <div data-include="/components/footer.html"></div>
     </article>
   </main>
 
@@ -100,16 +98,7 @@
   </footer>
 
   <!-- header.htmlの読み込み -->
-  <script>
-    fetch("/header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-
-    // フッターの年を自動更新
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src = "/js/include.js"></script>
 
   <!-- JSが無効な場合 -->
   <noscript>
