@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========== 最新記事1件表示 ==========
 async function loadLatestPost() {
   try {
-    const res = await fetch("/posts/posts.json", { cache: "no-cache" });
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
 
     // posts.json は日付降順前提
