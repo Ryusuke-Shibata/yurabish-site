@@ -28,3 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// ========== 最新記事1件表示 ==========
+async function loadLatestPost() {
+  try {
+    const res = await fetch("/posts/posts.json", { cache: "no-cache" });
+    const posts = await res.json();
+
+    // posts.json は日付降順前提
+    const latest = posts[0];
+
+    document.getElementById("latest-post").innerHTML = `
+      <a href="${latest.url}">
+        <strong>${latest.title}</strong><br>
+        <small>${latest.date}</small>
+      </a>
+    `;
+  } catch (err) {
+    console.error(err);
+  }
+}
+loadLatestPost();
