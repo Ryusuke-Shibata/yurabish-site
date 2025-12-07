@@ -1,44 +1,31 @@
-// include.js
-document.addEventListener("DOMContentLoaded", () => {
+// ====== ヘッダー・フッターの読み込み ======
+async function includeParts() {
   const includes = document.querySelectorAll('[data-include]');
-
-  includes.forEach(async el => {
+  for (const el of includes) {
     const url = el.getAttribute('data-include');
     try {
-      // キャッシュ利用（ブラウザキャッシュ）を意識する単純fetch
-      const res = await fetch(url, {cache: "no-cache"}); // no-cacheにして更新を反映しやすく
-      if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`Failed: ${url}`);
       const html = await res.text();
       el.outerHTML = html;
-
-      // ナビの現在地ハイライト（header内の[data-nav]リンクを利用）
-      // これ実行はafter-insertのタイミングなので setTimeout を入れても良い
-      try {
-        const loc = location.pathname.replace(/\/$/, '') || '/';
-        document.querySelectorAll('nav a[data-nav]').forEach(a => {
-          const href = a.getAttribute('href').replace(/\/$/, '') || '/';
-          if (href === loc) a.classList.add('is-active');
-        });
-      } catch (e) { /* ignore */ }
-
     } catch (err) {
       console.error(err);
-      // フェイルセーフ：簡易表示を残す
-      el.innerHTML = `<div style="color:#f00">読み込み失敗: ${url}</div>`;
+      el.innerHTML = `<div>読込失敗: ${url}</div>`;
     }
-  });
-});
+  }
+}
 
-// ========== 最新記事1件表示 ==========
+// ====== 最新記事1件表示 ======
 async function loadLatestPost() {
+  const el = document.getElementById("latest-post");
+  if (!el) return;
+
   try {
     const res = await fetch("/blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
-
-    // posts.json は日付降順前提
     const latest = posts[0];
 
-    document.getElementById("latest-post").innerHTML = `
+    el.innerHTML = `
       <a href="${latest.url}">
         <strong>${latest.title}</strong><br>
         <small>${latest.date}</small>
@@ -48,4 +35,31 @@ async function loadLatestPost() {
     console.error(err);
   }
 }
-loadLatestPost();
+
+// ====== 一覧表示 ======
+async function loadPosts() {
+  const list = document.getElementById("posts-list");
+  if (!list) return;
+
+  try {
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
+    const posts = await res.json();
+
+    list.innerHTML = posts.map(post => `
+      <article class="post-item">
+        <h2><a href="${post.url}">${post.title}</a></h2>
+        <small>${post.date} | ${post.category}</small>
+        <p>${post.summary}</p>
+      </article>
+    `).join("");
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// ====== 初期実行 ======
+document.addEventListener("DOMContentLoaded", async () => {
+  await includeParts();   // ←これ終わってから
+  loadLatestPost();       // 最新記事
+  loadPosts();            // 一覧生成
+});
