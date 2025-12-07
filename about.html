@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="header-placeholder"></div>
+  <div data-include="/components/header.html"></div>
   <main>
     <h1>Profile</h1>
     <p>自己紹介です。</p>
@@ -40,17 +40,9 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; Yurabish — Built with Cloudflare Pages</p>
-  </footer>
+  <div data-include="/components/footer.html"></div>
 
-  <script>
-    fetch("/header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-  </script>
+  <script src = "/js/include.js" defer></script>
 
   <noscript>
     <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
