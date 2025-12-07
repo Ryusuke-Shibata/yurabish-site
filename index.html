@@ -20,9 +20,9 @@
       <p>個人の学習や趣味をまとめた場所です。気ままに投稿していきますので、雑多な物置になっていくと思います。</p>
     </section>
 
-    <section id="recent-posts">
+    <section>
       <h2>最近の投稿</h2>
-      <ul id="recent-posts-list"></ul>
+      <div id="latest-post"></div>
     </section>
   </main>
 
@@ -30,28 +30,6 @@
 
   <!-- JavaScriptコードの埋め込み -->
   <script src="/js/include.js" defer></script>
-  <!--
-  <script>
-    fetch("/header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-    fetch("blog/posts.json")
-    .then(response => response.json())
-    .then(posts => {
-      const list = document.getElementById("recent-posts-list");
-      // 最新1件を表示
-      posts.slice(0, 1).forEach(post => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${post.url}">${post.title}</a> <small>(${post.date})</small>`;
-        list.appendChild(li);
-      });
-    })
-    .catch(error => {
-      console.error("投稿リストの読み込みに失敗しました:", error);
-    });
-  </script>
 
   <!-- Scriptが動作しない場合の処理 -->
   <noscript>
