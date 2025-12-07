@@ -42,13 +42,16 @@ async function loadPosts() {
   if (!list) return;
 
   try {
-    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
+    console.log("fetch result:", res); // ★追加
     const posts = await res.json();
+    console.log("posts.json raw:", posts); // ★追加
     renderPosts(posts, list);
   } catch (err) {
-    console.error(err);
+    console.error("LoadPosts Error:", err); // ★強化
     list.innerHTML = "<p>投稿を読み込めませんでした</p>";
   }
+
 }
 
 // ====== 投稿描画関数（追記部分） ======
