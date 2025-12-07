@@ -11,7 +11,7 @@
 
 <!-- 本文 -->
 <body>
-  <div id="header-placeholder"></div>
+  <div id="header"></div>
   <main>
     <!-- セクション（見出しとセット） -->
     <section>
@@ -31,6 +31,7 @@
   </footer>
 
   <!-- JavaScriptコードの埋め込み -->
+  <script src="/js/include.js"></script>
   <script>
     fetch("/header.html")
       .then(response => response.text())
