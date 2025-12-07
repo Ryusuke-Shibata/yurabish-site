@@ -21,7 +21,7 @@ async function loadLatestPost() {
   if (!el) return;
 
   try {
-    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
     const latest = posts[0];
 
@@ -42,20 +42,24 @@ async function loadPosts() {
   if (!list) return;
 
   try {
-    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
-
-    list.innerHTML = posts.map(post => `
-      <article class="post-item">
-        <h2><a href="${post.url}">${post.title}</a></h2>
-        <small>${post.date} | ${post.category}</small>
-        <p>${post.summary}</p>
-      </article>
-    `).join("");
+    renderPosts(posts, list);
   } catch (err) {
     console.error(err);
     list.innerHTML = "<p>投稿を読み込めませんでした</p>";
   }
+}
+
+// ====== 投稿描画関数（追記部分） ======
+function renderPosts(posts, container) {
+  container.innerHTML = posts.map(post => `
+    <article class="post-item">
+      <h2><a href="${post.url}">${post.title}</a></h2>
+      <small>${post.date} | ${post.category}</small>
+      <p>${post.summary}</p>
+    </article>
+  `).join("");
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
