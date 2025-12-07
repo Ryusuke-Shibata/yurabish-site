@@ -54,12 +54,12 @@ async function loadPosts() {
     `).join("");
   } catch (err) {
     console.error(err);
+    list.innerHTML = "<p>投稿を読み込めませんでした</p>";
   }
 }
 
-// ====== 初期実行 ======
 document.addEventListener("DOMContentLoaded", async () => {
-  await includeParts();   // ←これ終わってから
-  loadLatestPost();       // 最新記事
-  loadPosts();            // 一覧生成
+  await includeParts();
+  loadLatestPost();
+  loadPosts();
 });
