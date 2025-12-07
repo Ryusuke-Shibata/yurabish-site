@@ -21,7 +21,7 @@ async function loadLatestPost() {
   if (!el) return;
 
   try {
-    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
+    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
     const latest = posts[0];
 
@@ -42,7 +42,7 @@ async function loadPosts() {
   if (!list) return;
 
   try {
-    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
+    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
 
     list.innerHTML = posts.map(post => `
