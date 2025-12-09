@@ -50,12 +50,29 @@
           インクルードという言葉自体は「別のファイルをあるファイルに組み込むこと」を意味します。<br>
           Webページにおいては共通部分をインクルードすることで保守性の向上が狙えます。<br>
           インクルード化さえ実現していれば修正箇所は組み込むコンポーネントのみでよいわけです。<br>
+          <br>
           では本題へ、どうやってインクルードするのかという話をしましょう。<br>
           インクルードにはJavaScriptの使用が必要です。<br>
           （調べたところPHPやSSIでも可能みたいですが今回はJavaScriptで実装しました。）<br>
           JavaScriptとはスクリプト言語で、今回で言うと動的なコンテンツの表示に利用します。<br>
-          
-          <pre><code>console.log("Hello, world!");</code></pre>
+          <br>
+          実際のコードはこんな感じです。<br>          
+          <pre><code>
+            async function includeParts() {<br>
+              const targets = document.querySelectorAll("[data-include]");<br>
+              for (const el of targets) {<br>
+                const url = el.getAttribute("data-include");<br>
+                try {<br>
+                  const html = await (await fetch(url)).text();<br>
+                  el.outerHTML = html;<br>
+                } catch {<br>
+                  el.outerHTML = `<div>読み込み失敗: ${url}</div>`;<br>
+                }<br>
+              }<br>
+            }<br>
+            <br>
+            document.addEventListener("DOMContentLoaded", includeParts);
+          </code></pre>
           <h3>JavaScriptの読み込み</h3>
         </p>
 
