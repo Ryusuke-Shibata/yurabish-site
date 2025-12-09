@@ -56,7 +56,8 @@
           （調べたところPHPやSSIでも可能みたいですが今回はJavaScriptで実装しました。）<br>
           JavaScriptとはスクリプト言語で、今回で言うと動的なコンテンツの表示に利用します。<br>
           <br>
-          実際のコードはこんな感じです。<br>          
+          実際のコードはこんな感じです。<br>
+          【JavaScript】<br>
           <pre><code>
             async function includeParts() {<br>
               const targets = document.querySelectorAll("[data-include]");<br>
@@ -72,8 +73,18 @@
             }<br>
             <br>
             document.addEventListener("DOMContentLoaded", includeParts);
-          </code></pre>
+          </code></pre><br>
+          要点だけ整理すると、<br>
+          querySelectorAll("[data-include]")：読み込み対象のコンポーネントを探す<br>
+          fetch(url)：読み込み対象のコンポーネントの内容を取得<br>
+          el.outerHTML = html：元のタグを置き換え<br>
+          となります。<br>
+          つまり、HTML側で<code><header data-include="./components/header.html"></header></code>のように記載すると、<br>
+          外部HTMLの「./components/header.html」が読み込み対象のコンポーネントとして探し出され、<br>
+          fetch()で内容が取得され、最終的には元のタグごと置き換えらえる、といった動きになるようです。<br>
+          動きだけ見るとシンプルなんですけどね、コードとして記述すると難しいことをやっているみたいですね。<br>
           <h3>JavaScriptの読み込み</h3>
+          
         </p>
 
         <blockquote>
