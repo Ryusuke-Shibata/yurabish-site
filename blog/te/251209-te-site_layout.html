@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>サイトレイアウトの編集 | Sairy Hub</title>
+  <title>共通部分のコンポーネント化 | Sairy Hub</title>
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -16,7 +16,7 @@
   <main class="blog-post">
     <article>
       <header class="post-header">
-        <h1 class="post-title">サイトレイアウトの編集</h1>
+        <h1 class="post-title">共通部分のコンポーネント化</h1>
         <div class="post-meta">
           <time datetime="2025-11-03">2025年12月9日</time>
           <span class="category">技術</span>
@@ -52,7 +52,7 @@
           インクルード化さえ実現していれば修正箇所は組み込むコンポーネントのみでよいわけです。<br>
           <br>
           では本題へ、どうやってインクルードするのかという話をしましょう。<br>
-          インクルードにはJavaScriptの使用が必要です。<br>
+          インクルードにはJavaScriptを使用します。<br>
           （調べたところPHPやSSIでも可能みたいですが今回はJavaScriptで実装しました。）<br>
           JavaScriptとはスクリプト言語で、今回で言うと動的なコンテンツの表示に利用します。<br>
           <br>
@@ -83,17 +83,23 @@
           外部HTMLの「./components/header.html」が読み込み対象のコンポーネントとして探し出され、<br>
           fetch()で内容が取得され、最終的には元のタグごと置き換えらえる、といった動きになるようです。<br>
           動きだけ見るとシンプルなんですけどね、コードとして記述すると難しいことをやっているみたいですね。<br>
-          <h3>JavaScriptの読み込み</h3>
-          
+          で、ページ内で<code><script src = "~~.js"></script></code>のように記述して作ったJavaScriptファイルを外部ファイルとして呼び出せば、<br>
+          上のほうに書いたコードが動作するというわけですね、たぶん。<br>
+          ここは正直なところ理解しきれていません、いったんおまじない的なものとして理解しておこうと思います。<br>          
         </p>
 
-        <blockquote>
-          引用や重要なメモを入れる場合はこのように書きます。
-        </blockquote>
-
-        <h3>サブトピック</h3>
-        <p>コードを含める例：</p>
-        <pre><code>console.log("Hello, world!");</code></pre>
+        <h2>最後に</h2>
+        <p>
+          ということで、今回はページの共通部分のコンポーネント化を実装しました。<br>
+          作りつつの勉強なので、なかなか順序良く理解して次！　という進め方ではなく、<br>
+          「とりあえずこうすればなんか動くんだな」くらいの理解で進めています。<br>
+          そのうち腰を据えて勉強しないと理解が追い付かないタイミングも来るでしょう。<br>
+          今回もふわっとした理解まででとどめていますが、いつかちゃんと理解したいと思ってます。<br>
+          <br>
+          次はMarkdownの実装ですかね、何となく聞いたことはありますが、ページの編集が簡単になるようなので。<br>
+          それでは読んでいただいてありがとうございました。<br>
+          次回もどうぞよろしくお願いします。<br>
+        </p>
       </section>
 
       <footer class="post-footer">
