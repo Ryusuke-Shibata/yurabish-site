@@ -255,3 +255,21 @@ nav a.active {
   margin-right: 0.3em;
   font-size: 0.85em;
 }
+
+/* Markdown用 */
+#content h1, #content h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: .3em;
+}
+
+#content pre {
+  background: #f6f8fa;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+#content code {
+  background: #f0f0f0;
+  padding: .2em .4em;
+  border-radius: 4px;
+}
