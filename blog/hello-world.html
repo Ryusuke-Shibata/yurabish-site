@@ -24,18 +24,9 @@
       </header>
 
       <section class="post-content">
-        <p>ここに本文を記述します。段落をいくつも書いてOKです。</p>
-
-        <h2>小見出し</h2>
-        <p>本文の例：この部分では学んだことや感想などを自由に記述できます。</p>
-
-        <blockquote>
-          引用や重要なメモを入れる場合はこのように書きます。
-        </blockquote>
-
-        <h3>サブトピック</h3>
-        <p>コードを含める例：</p>
-        <pre><code>console.log("Hello, world!");</code></pre>
+        <div id="content" class="post-content">
+          読み込み中...
+        </div>
       </section>
 
       <footer class="post-footer">
@@ -49,6 +40,8 @@
 
   <!-- header.htmlの読み込み -->
   <script src = "js/include.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/js/markdown.js"></script>
 
   <!-- JSが無効な場合 -->
   <noscript>
