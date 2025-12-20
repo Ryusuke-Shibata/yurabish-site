@@ -12,7 +12,7 @@ async function loadMarkdown() {
   const text = await res.text();
 
   // --- Front Matter 分離 ---
-  const match = text.match(/^---([\s\S]*?)---([\s\S]*)$/);
+  const match = text.match(/^\s*---([\s\S]*?)---([\s\S]*)$/);
 
   let meta = {};
   let body = text;
