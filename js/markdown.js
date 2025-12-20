@@ -8,7 +8,7 @@ async function loadMarkdown() {
   }
 
   // ★ パスが変わった点に注意
-  const res = await fetch(`/blog/te/${file}.md`);
+  const res = await fetch(`/blog/${file}.md`);
   const raw = await res.text();
 
   // BOM除去（超重要）
