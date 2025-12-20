@@ -60,3 +60,6 @@ async function loadMarkdown() {
 }
 
 loadMarkdown();
+
+console.log("post-title:", document.querySelector(".post-title"));
+console.log("category:", document.querySelector(".category"));
