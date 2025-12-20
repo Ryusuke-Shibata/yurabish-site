@@ -1,42 +1,42 @@
 [
     {
     "title": "Sairy Hub 更新ロードマップ",
-    "url": "/blog/te/roadmap_01?post=roadmap_01",
+    "url": "/blog/post.html?post=roadmap_01",
     "date": "2025-12-20",
     "summary": "Sairy Hubをどのように更新していくかのロードマップです。",
     "category": "技術"
   },
   {
     "title": "もう終わる12月",
-    "url": "/blog/lf/dialy_01?post=diary_01",
+    "url": "/blog/post.html?post=diary_01",
     "date": "2025-12-09",
     "summary": "1年の振り返りと来年の目標についてです。",
     "category": "生活・日記"
   },
   {
     "title": "共通部分のコンポーネント化",
-    "url": "/blog/te/components?post=components",
+    "url": "/blog/post.html?post=components",
     "date": "2025-12-09",
     "summary": "JavaScriptによるコンポーネントのインクルードについてです。",
     "category": "技術"
   },
   {
     "title": "Staffer Case:超能力推理アドベンチャー",
-    "url": "/blog/hb/staffercase_play?staffercase_play",
+    "url": "/blog/post.html?staffercase_play",
     "date": "2025-12-01",
     "summary": "ゲームレビュー、第1弾です。",
     "category": "ホビー"
   },
   {
     "title": "MS-900学習ログ #1",
-    "url": "/blog/te/ms900_01?post=ms900_01",
+    "url": "/blog/post.html?post=ms900_01",
     "date": "2025-11-21",
     "summary": "MS-900の学習まとめ、第1弾です。",
     "category": "技術"
   },
   {
     "title": "個人サイト開設までの道のり",
-    "url": "/blog/te/site_open?post=site-open",
+    "url": "/blog/post.html?post=site-open",
     "date": "2025-11-12",
     "summary": "個人サイト開設の備忘です。",
     "category": "技術"
