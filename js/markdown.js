@@ -3,16 +3,19 @@ async function loadMarkdown() {
   const file = params.get("post");
 
   if (!file) {
-    document.getElementById("content").textContent =
-      "記事が指定されていません";
+    document.getElementById("content").textContent = "記事が指定されていません";
     return;
   }
 
-  const res = await fetch(`/posts/${file}.md`);
-  const text = await res.text();
+  // ★ パスが変わった点に注意
+  const res = await fetch(`/blog/te/${file}.md`);
+  const raw = await res.text();
 
-  // --- Front Matter 分離 ---
-  const match = text.match(/^\s*---([\s\S]*?)---([\s\S]*)$/);
+  // BOM除去（超重要）
+  const text = raw.replace(/^\uFEFF/, "");
+
+  // Front Matter を安全に分離
+  const match = text.match(/^\s*---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
 
   let meta = {};
   let body = text;
@@ -23,29 +26,36 @@ async function loadMarkdown() {
 
     metaText.split("\n").forEach(line => {
       const [key, ...rest] = line.split(":");
-      if (!key) return;
+      if (!key || rest.length === 0) return;
       meta[key.trim()] = rest.join(":").trim();
     });
   }
 
-  // --- メタデータ反映 ---
+  /* ===== メタデータ反映 ===== */
+
+  // title
   if (meta.title) {
     document.title = meta.title;
-    document.getElementById("page-title").textContent = meta.title;
-    document.getElementById("post-title").textContent = meta.title;
+    const h1 = document.querySelector(".post-title");
+    if (h1) h1.textContent = meta.title;
   }
 
+  // date
   if (meta.date) {
-    const timeEl = document.getElementById("post-date");
-    timeEl.textContent = meta.date;
-    timeEl.setAttribute("datetime", meta.date);
+    const time = document.querySelector(".post-meta time");
+    if (time) {
+      time.dateTime = meta.date;
+      time.textContent = meta.date.replace(/-/g, "年") + "日";
+    }
   }
 
+  // category
   if (meta.category) {
-    document.getElementById("post-category").textContent = meta.category;
+    const cat = document.querySelector(".post-meta .category");
+    if (cat) cat.textContent = meta.category;
   }
 
-  // --- 本文描画 ---
+  // 本文
   document.getElementById("content").innerHTML = marked.parse(body);
 }
 
