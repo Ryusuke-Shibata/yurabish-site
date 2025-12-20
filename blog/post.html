@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<header class="post-header">
-  <h1 class="post-title" id="post-title"></h1>
-  <div class="post-meta">
-    <time id="post-date"></time>
-    <span class="category" id="post-category"></span>
-  </div>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Loading...</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 
 <body>
   <!-- 共通ヘッダー -->
   <div data-include="/components/header.html"></div>
 
   <!-- 記事本体 -->
-  <main id="content">
-    <!-- ここにMarkdownの記事が入る -->
+  <main class="post">
+
+    <!-- ▼ 追加：記事ヘッダー（CSSを壊さない） -->
+    <header class="post-header">
+      <h1 class="post-title" id="post-title"></h1>
+      <div class="post-meta">
+        <time id="post-date"></time>
+        <span class="category" id="post-category"></span>
+      </div>
+    </header>
+
+    <!-- ▼ Markdown本文 -->
+    <div id="content">
+      <!-- ここにMarkdownの記事本文が入る -->
+    </div>
+
   </main>
 
   <!-- 共通フッター -->
   <div data-include="/components/footer.html"></div>
 
-  <script src = "/js/include.js"></script>
+  <script src="/js/include.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="/js/markdown.js"></script>
 
-  <!-- JSが無効な場合 -->
   <noscript>
-    <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
-      JavaScriptが無効になっています。このサイトの一部機能が動作しない場合があります。
+    <div style="background:#ffcccc; padding:1em; text-align:center;">
+      JavaScriptが無効になっています。
     </div>
   </noscript>
 </body>
