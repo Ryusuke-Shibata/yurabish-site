@@ -1,3 +1,8 @@
+---
+title: Markdown活用
+date: 2025-MM-dd
+category: 技術
+---
 
 こんにちは、Bindです。  
 これまでのSairy Hubの記事は、**HTMLファイルを直接編集する形**で作成していました。  
