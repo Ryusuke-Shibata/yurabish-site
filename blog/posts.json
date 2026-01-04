@@ -1,17 +1,24 @@
 [
   {
+    "title": "ようこそ2026年へ",
+    "url": "/blog/post.html?post=lf/diary_260104",
+    "date": "2026-01-04",
+    "summary": "あけましておめでとうございます。",
+    "category": "生活・日記"
+  },
+  {
     "title": "未解決事件は終わらせないといけないから",
-    "url": "/blog/post.html?post=te/mikaiketsu_review",
+    "url": "/blog/post.html?post=hb/mikaiketsu_review",
     "date": "2025-12-27",
     "summary": "『未解決事件は終わらせないといけないから』をプレイした感想です。",
-    "category": "技術"
+    "category": "ホビー"
   },
   {
     "title": "Sairy Hub 更新ロードマップ",
     "url": "/blog/post.html?post=mk/roadmap_01",
     "date": "2025-12-20",
     "summary": "Sairy Hubをどのように更新していくかのロードマップです。",
-    "category": "技術"
+    "category": "制作"
   },
   {
     "title": "もう終わる12月",
@@ -25,7 +32,7 @@
     "url": "/blog/post.html?post=mk/components",
     "date": "2025-12-09",
     "summary": "JavaScriptによるコンポーネントのインクルードについてです。",
-    "category": "技術"
+    "category": "制作"
   },
   {
     "title": "Staffer Case:超能力推理アドベンチャー",
@@ -46,7 +53,7 @@
     "url": "/blog/post.html?post=mk/site_open",
     "date": "2025-11-12",
     "summary": "個人サイト開設の備忘です。",
-    "category": "技術"
+    "category": "制作"
   },
   {
     "title": "自己紹介（詳しめ）",
