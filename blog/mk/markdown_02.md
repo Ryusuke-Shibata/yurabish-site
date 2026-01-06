@@ -1,7 +1,7 @@
 ---
 title: 表示用HTMLの共通化
 date: 2025-MM-dd
-category: 技術
+category: 制作
 ---
 
 
