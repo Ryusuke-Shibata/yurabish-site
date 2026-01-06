@@ -1,7 +1,7 @@
 ---
 title: 共通部分のコンポーネント化
 date: 2025-12-09
-category: 技術
+category: 制作
 ---
 
 こんにちは、Bindです。  
