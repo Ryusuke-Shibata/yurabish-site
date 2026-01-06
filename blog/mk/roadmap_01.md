@@ -1,7 +1,7 @@
 ---
 title: Sairy Hubロードマップ #01
 date: 2025-12-20
-category: 技術
+category: 制作
 ---
 
 こんにちは、Bindです。  
