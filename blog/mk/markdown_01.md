@@ -1,7 +1,7 @@
 ---
 title: Markdown活用
 date: 2025-MM-dd
-category: 技術
+category: 制作
 ---
 
 こんにちは、Bindです。  
