@@ -1,14 +1,14 @@
 [
   {
     "title": "MS-900学習ログ #2",
-    "url": "/blog/post.html?post=te/ms900_02",
+    "url": "/blog/post.html?post=te/ms900/ms900_02",
     "date": "2026-01-11",
     "summary": "MS-900の学習まとめ、ユーザー向けサービス編です。",
     "category": "技術"
   },
   {
     "title": "ようこそ2026年へ",
-    "url": "/blog/post.html?post=lf/diary_260104",
+    "url": "/blog/post.html?post=lf/2026/diary_260104",
     "date": "2026-01-04",
     "summary": "あけましておめでとうございます。",
     "category": "生活・日記"
@@ -29,7 +29,7 @@
   },
   {
     "title": "もう終わる12月",
-    "url": "/blog/post.html?post=lf/diary_251215",
+    "url": "/blog/post.html?post=lf/2025/diary_251215",
     "date": "2025-12-15",
     "summary": "1年の振り返りと来年の目標についてです。",
     "category": "生活・日記"
@@ -50,7 +50,7 @@
   },
   {
     "title": "MS-900学習ログ #1",
-    "url": "/blog/post.html?post=te/ms900_01",
+    "url": "/blog/post.html?post=te/ms900/ms900_01",
     "date": "2025-11-21",
     "summary": "MS-900の学習まとめ、基礎編です。",
     "category": "技術"
@@ -67,6 +67,6 @@
     "url": "/blog/post.html?post=zz/about_me",
     "date": "2025-11-03",
     "summary": "プロフィールページよりも少し細かい自己紹介です。",
-    "category": "生活・日記"
+    "category": "雑記"
   }
 ]
