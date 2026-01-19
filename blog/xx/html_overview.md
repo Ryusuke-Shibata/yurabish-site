@@ -2,6 +2,9 @@
 title: HTMLの基本構造の理解
 date: 2026-MM-dd
 category: 技術
+tags:
+  - HTML
+  - Webサイト
 ---
 
 こんにちは、Bindです。  
