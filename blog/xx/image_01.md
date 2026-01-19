@@ -2,6 +2,9 @@
 title: 画像を含んだ投稿
 date: 2026-MM-dd
 category: 制作
+tags:
+  - ブログ運用
+  - 画像
 ---
 
 こんにちは、Bindです。  
