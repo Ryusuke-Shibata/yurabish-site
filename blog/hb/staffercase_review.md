@@ -2,6 +2,10 @@
 title: Staffer Case:超能力推理アドベンチャー
 date: 2025-12-01
 category: ホビー
+tags:
+  - ADV
+  - 推理
+  - レビュー
 ---
 
 こんにちは、Bindです。  
