@@ -2,6 +2,9 @@
 title: 表示用HTMLの共通化
 date: 2025-MM-dd
 category: 制作
+tags:
+  - ブログ運用
+  - Markdown
 ---
 
 
