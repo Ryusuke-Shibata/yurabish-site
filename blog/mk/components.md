@@ -2,6 +2,10 @@
 title: 共通部分のコンポーネント化
 date: 2025-12-09
 category: 制作
+tags:
+  - Web
+  - ブログ運用
+  - Markdown
 ---
 
 こんにちは、Bindです。  
