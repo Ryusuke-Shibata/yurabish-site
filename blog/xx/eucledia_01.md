@@ -2,6 +2,9 @@
 title: Euclidea #1
 date: 2026-MM-dd
 category: 学習
+tags:
+  - 数学
+  - パズル
 ---
 
 面白いゲームを見つけました。  
