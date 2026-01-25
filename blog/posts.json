@@ -1,5 +1,12 @@
 [
   {
+    "title": "画像を含んだ投稿",
+    "url": "/blog/post.html?post=mk/image_01.md",
+    "date": "2026-01-25",
+    "summary": "画像投稿の実装です。",
+    "category": "技術"
+  },
+  {
     "title": "MS-900学習ログ #3",
     "url": "/blog/post.html?post=te/ms900/ms900_03",
     "date": "2026-01-18",
