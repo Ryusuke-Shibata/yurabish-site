@@ -1,6 +1,6 @@
 ---
 title: 画像を含んだ投稿
-date: 2026-MM-dd
+date: 2026-01-25
 category: 制作
 tags:
   - ブログ運用
