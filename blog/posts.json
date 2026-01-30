@@ -1,10 +1,17 @@
 [
   {
+    "title": "表示用HTMLの共通化",
+    "url": "/blog/post.html?post=mk/markdown_02",
+    "date": "2026-01-31",
+    "summary": "更新省力化のためのHTMLの集約作業です。",
+    "category": "制作"
+  },
+  {
     "title": "画像を含んだ投稿",
     "url": "/blog/post.html?post=mk/image_01",
     "date": "2026-01-25",
     "summary": "画像投稿の実装です。",
-    "category": "技術"
+    "category": "制作"
   },
   {
     "title": "MS-900学習ログ #3",
