@@ -273,3 +273,13 @@ nav a.active {
   padding: .2em .4em;
   border-radius: 4px;
 }
+
+/* Blog-Hub用 */
+.blog-hub ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-hub li {
+  margin-bottom: 1rem;
+}
