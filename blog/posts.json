@@ -50,10 +50,10 @@
   },
   {
     "title": "未解決事件は終わらせないといけないから",
-    "url": "/blog/post.html?post=hb/mikaiketsu_review",
+    "slug": "mikaiketsu_review",
+    "category": "hb",
     "date": "2025-12-27",
-    "summary": "『未解決事件は終わらせないといけないから』をプレイした感想です。",
-    "category": "ホビー"
+    "summary": "『未解決事件は終わらせないといけないから』をプレイした感想です。"
   },
   {
     "title": "Sairy Hub 更新ロードマップ",
@@ -78,10 +78,10 @@
   },
   {
     "title": "Staffer Case:超能力推理アドベンチャー",
-    "url": "/blog/post.html?post=hb/staffercase_review",
+    "slug": "staffercase_review",
+    "category": "hb"
     "date": "2025-12-01",
-    "summary": "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。",
-    "category": "ホビー"
+    "summary": "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。"
   },
   {
     "title": "MS-900学習ログ #1",
