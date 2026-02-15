@@ -5,6 +5,7 @@ async function loadArchive() {
   const posts = await res.json();
 
   const container = document.getElementById("posts");
+  if(!container) return;
 
   container.innerHTML = posts.map(p => `
     <article>
