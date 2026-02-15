@@ -4,7 +4,7 @@ async function loadArchive() {
   const res = await fetch("/blog/posts.json");
   const archive = await res.json();
 
-  const container = document.getElementById("posts");
+  const container = document.getElementById("archive");
   if(!container) return;
 
   container.innerHTML = archive.map(p => `
