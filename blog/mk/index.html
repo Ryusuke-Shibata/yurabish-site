@@ -22,38 +22,13 @@
     <!-- 記事一覧 -->
     <section class="category-articles">
       <h2>Articles</h2>
-
       <div id="posts"></div>
-      
-      <script src="/js/posts.js"></script>
+      <script src="/js/category.js"></script>
       <script>
-        async function renderCategory(category) {
-        const posts = await loadPosts();
-
-        const filtered = posts
-          .filter(p => p.category === category)
-          .sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        const container = document.getElementById("posts");
-
-        container.innerHTML = filtered.map(p => `
-          <article>
-            <h2>
-              <a href="/blog/post.html?post=${p.category}/${p.slug}">
-                ${p.title}
-              </a>
-            </h2>
-            <small>${p.date}</small>
-            <p>${p.summary}</p>
-          </article>
-        `).join("");
-      }
-
-      renderCategory("hb");
+        renderCategory("hb");
       </script>
-
-
     </section>
+
   </main>
 
   <div data-include="/components/footer.html"></div>
