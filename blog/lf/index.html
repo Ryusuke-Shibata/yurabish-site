@@ -19,11 +19,14 @@
       <p>日記的な投稿や日々の発見など、雑多な記事を投稿します。</p>
     </section>
 
-    <section>
-      <h2>投稿一覧（準備中）</h2>
-      <ul>
-        <li><a href = "https://yurabish.com/blog/post?post=lf/2025/diary_251215" data-nav>もう終わる12月</a></li>
-      </ul>
+    <!-- 記事一覧 -->
+    <section class="category-articles">
+      <h2>Articles</h2>
+      <div id="posts"></div>
+      <script src="/js/category.js"></script>
+      <script>
+        renderCategory("hb");
+      </script>
     </section>
   </main>
 
