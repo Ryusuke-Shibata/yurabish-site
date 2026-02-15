@@ -2,12 +2,12 @@
 async function loadArchive() {
 
   const res = await fetch("/blog/posts.json");
-  const posts-list = await res.json();
+  const archive = await res.json();
 
   const container = document.getElementById("posts");
   if(!container) return;
 
-  container.innerHTML = posts-list.map(p => `
+  container.innerHTML = archive.map(p => `
     <article>
       <h3>
         <a href="/blog/post.html?post=${p.category}/${p.slug}">
