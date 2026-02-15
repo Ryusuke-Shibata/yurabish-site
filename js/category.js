@@ -1,6 +1,7 @@
 async function renderCategory(category) {
 
-  const posts = await loadPosts();
+  const res = await fetch("/blog/posts.json");
+  const posts = await res.json();
 
   const filtered = posts
     .filter(p => p.category === category)
@@ -19,5 +20,4 @@ async function renderCategory(category) {
       <p>${p.summary}</p>
     </article>
   `).join("");
-
 }
