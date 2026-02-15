@@ -25,6 +25,11 @@
       <div id="posts"></div>
       <script src="/js/posts.js"></script>
       <script src="/js/category.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          renderCategory("hb");
+        });
+      </script>
     </section>
 
   </main>
@@ -32,14 +37,10 @@
   <div data-include="/components/footer.html"></div>
 
   <!-- JavaScriptコードの埋め込み -->
-<!--  <script src="/js/include.js" defer></script> -->
+  <script src="/js/include.js" defer></script>
 
   <!-- 記事一覧呼び出し -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      renderCategory("hb");
-    });
-  </script>
+
   <!-- Scriptが動作しない場合の処理 -->
   <noscript>
     <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
