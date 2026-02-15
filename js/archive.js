@@ -1,18 +1,22 @@
 // ====== 一覧表示 ======
-async function loadArchive() {
-  const list = document.getElementById("posts-list");
-  if (!list) return;
+async function loadArchive(category) {
 
-  try {
-    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
-    console.log("fetch result:", res); // ★追加
-    const posts = await res.json();
-    console.log("posts.json raw:", posts); // ★追加
-    renderPosts(posts, list);
-  } catch (err) {
-    console.error("LoadPosts Error:", err); // ★強化
-    list.innerHTML = "<p>投稿を読み込めませんでした</p>";
-  }
+  const res = await fetch("/blog/posts.json");
+  const posts = await res.json();
+
+  const container = document.getElementById("posts");
+
+  container.innerHTML = posts.map(p => `
+    <article>
+      <h3>
+        <a href="/blog/post.html?post=${p.category}/${p.slug}">
+          ${p.title}
+        </a>
+      </h3>
+      <small>${p.date}</small>
+      <p>${p.summary}</p>
+    </article>
+  `).join("");
 }
 
 document.addEventListener("DOMContentLoaded", loadArchive);
