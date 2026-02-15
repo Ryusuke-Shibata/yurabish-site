@@ -1,16 +1,16 @@
 // ====== ヘッダー・フッターの読み込み ======
 async function includeParts() {
-  const includes = document.querySelectorAll('[data-include]');
-  for (const el of includes) {
-    const url = el.getAttribute('data-include');
+  const elements = document.querySelectorAll("[data-include]");
+
+  for (const el of elements) {
+    const url = el.getAttribute("data-include");
+
     try {
-      const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) throw new Error(`Failed: ${url}`);
+      const res = await fetch(url);
       const html = await res.text();
       el.outerHTML = html;
     } catch (err) {
-      console.error(err);
-      el.innerHTML = `<div>読込失敗: ${url}</div>`;
+      console.error("Include error:", url, err);
     }
   }
 }
