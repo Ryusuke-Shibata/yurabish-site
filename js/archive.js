@@ -1,5 +1,5 @@
 // ====== 一覧表示 ======
-async function loadArchive(category) {
+async function loadArchive() {
 
   const res = await fetch("/blog/posts.json");
   const posts = await res.json();
