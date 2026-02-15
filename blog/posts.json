@@ -43,7 +43,7 @@
   },
   {
     "title": "ようこそ2026年へ",
-    "slug": "/blog/post.html?post=lf/2026/diary_260104",
+    "slug": "2026/diary_260104",
     "category": "lf",
     "date": "2026-01-04",
     "summary": "あけましておめでとうございます。"
@@ -64,7 +64,7 @@
   },
   {
     "title": "もう終わる12月",
-    "slug": "/blog/post.html?post=lf/2025/diary_251215",
+    "slug": "2025/diary_251215",
     "category": "lf",
     "date": "2025-12-15",
     "summary": "1年の振り返りと来年の目標についてです。"
@@ -99,7 +99,7 @@
   },
   {
     "title": "自己紹介（詳しめ）",
-    "slug": "/blog/post.html?post=zz/about_me",
+    "slug": "about_me",
     "category": "lf",
     "date": "2025-11-03",
     "summary": "プロフィールページよりも少し細かい自己紹介です。"
