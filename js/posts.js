@@ -1,4 +1,111 @@
 async function loadPosts() {
-  const res = await fetch("/blog/posts.json");
-  return await res.json();
+  return [
+    {
+      title: "MS-900学習ログ #4",
+      slug: "ms900/ms900_04",
+      category: "te",
+      date: "2026-02-11",
+      summary: "MS-900の学習まとめ、セキュリティ機能後編です。"
+    },
+    {
+      title: "1年は冬から始まる",
+      slug: "2026/diary_260204",
+      category: "lf",
+      date: "2026-02-04",
+      summary: "寒い寒い1月の振り返りです。"
+    },
+    {
+      title: "表示用HTMLの共通化",
+      slug: "markdown_02",
+      category: "mk",
+      date: "2026-01-31",
+      summary: "更新省力化のためのHTMLの集約作業です。"
+    },
+    {
+      title: "画像を含んだ投稿",
+      slug: "image_01",
+      category: "mk",
+      date: "2026-01-25",
+      summary: "画像投稿の実装です。"
+    },
+    {
+      title: "MS-900学習ログ #3",
+      slug: "ms900/ms900_03",
+      category: "te",
+      date: "2026-01-18",
+      summary: "MS-900の学習まとめ、セキュリティ機能前編です。"
+    },
+    {
+      title: "MS-900学習ログ #2",
+      slug: "ms900/ms900_02",
+      category: "te",
+      date: "2026-01-11",
+      summary: "MS-900の学習まとめ、ユーザー向けサービス編です。"
+    },
+    {
+    title: "ようこそ2026年へ",
+    slug: "/blog/post.html?post=lf/2026/diary_260104",
+    category: "lf",
+    date: "2026-01-04",
+    summary: "あけましておめでとうございます。"
+    },
+    {
+      title: "未解決事件は終わらせないといけないから",
+      slug: "mikaiketsu_review",
+      category: "hb",
+      date: "2025-12-27",
+      summary: "『未解決事件は終わらせないといけないから』をプレイした感想です。"
+    },
+    {
+      title: "Sairy Hub 更新ロードマップ",
+      slug: "roadmap_01",
+      category: "mk",
+      date: "2025-12-20",
+      summary: "Sairy Hubをどのように更新していくかのロードマップです。",
+    },
+    {
+      title: "もう終わる12月",
+      slug: "/blog/post.html?post=lf/2025/diary_251215",
+      category: "lf",
+      date: "2025-12-15",
+      summary: "1年の振り返りと来年の目標についてです。"
+    },
+    {
+      title: "共通部分のコンポーネント化",
+      slug: "components",
+      category: "mk",
+      date: "2025-12-09",
+      summary: "JavaScriptによるコンポーネントのインクルードについてです。"
+    },
+    {
+      title: "Staffer Case:超能力推理アドベンチャー",
+      slug: "staffercase_review",
+      category: "hb",
+      date: "2025-12-01",
+      summary: "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。"
+    },
+    {
+      title: "MS-900学習ログ #1",
+      slug: "ms900/ms900_01",
+      category: "te",
+      date: "2025-11-21",
+      summary: "MS-900の学習まとめ、基礎編です。",
+    },
+    {
+    title: "個人サイト開設までの道のり",
+    slug: "site_open",
+    category: "mk",
+    date: "2025-11-12",
+    summary: "個人サイト開設の備忘です。",
+    },
+    {
+      title: "自己紹介（詳しめ）",
+      slug: "/blog/post.html?post=zz/about_me",
+      category: "lf",
+      date: "2025-11-03",
+      summary: "プロフィールページよりも少し細かい自己紹介です。"
+    }
+  ];
 }
+
+
