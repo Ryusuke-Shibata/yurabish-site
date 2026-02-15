@@ -28,6 +28,12 @@
         renderCategory("hb");
       </script>
     </section>
+    <script>
+      fetch("/blog/posts.json")
+        .then(r => r.json())
+        .then(data => console.log("JSON OK", data))
+        .catch(err => console.error("JSON ERROR", err));
+    </script>
 
   </main>
 
