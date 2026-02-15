@@ -1,52 +1,76 @@
 <!DOCTYPE html>
-<html lang = "ja">
+<html lang="ja">
 
-<!-- ページ全体の定義 -->
 <head>
-  <meta charset = "UTF-8" />
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Sairy Hub</title>
-  <link rel = "stylesheet" href = "/css/style.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="Bindの個人サイト。技術・趣味・学習の記録をまとめています。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yurabish.com">
+
+  <!-- OGP -->
+  <meta property="og:title" content="Sairy Hub">
+  <meta property="og:description" content="Bindの個人サイト">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yurabish.com">
+  <meta property="og:image" content="https://yurabish.com/img/ogp.png">
+
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<!-- 本文 -->
 <body>
+
+  <!-- Header -->
   <div data-include="/components/header.html"></div>
-  <main>
-    <!-- セクション（見出しとセット） -->
-    <section>
-      <h2>ようこそ！</h2>
-      <p>ここはBindの個人サイトです。</p>
-      <p>個人の学習や趣味をまとめた場所です。気ままに投稿していきますので、雑多な物置になっていくと思います。</p>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section aria-labelledby="site-title">
+      <h1 id="site-title">Sairy Hub</h1>
+      <p>個人の学習・技術・趣味の記録サイトです。</p>
     </section>
 
-    <section>
-      <h2>Contents（準備中）</h2>
-      <ul>
-        <li><a href = "/blog/hb" data-nav>Hobby</a></li>
-        <li><a href = "/blog/te" data-nav>Tech</a></li>
-        <li><a href = "/blog/mk" data-nav>Make</a></li>
-        <li><a href = "/blog/lf" data-nav>Life</a></li>
-      </ul>
+    <!-- Contents Navigation -->
+    <section aria-labelledby="contents-heading">
+      <h2 id="contents-heading">Contents</h2>
+
+      <nav>
+        <ul>
+          <li><a href="/blog/hb">Hobby</a></li>
+          <li><a href="/blog/te">Tech</a></li>
+          <li><a href="/blog/mk">Make</a></li>
+          <li><a href="/blog/lf">Life</a></li>
+        </ul>
+      </nav>
     </section>
 
-    <section>
-      <h2>最近の投稿</h2>
-      <div id="latest-post"></div>
+    <!-- Latest Posts -->
+    <section aria-labelledby="latest-heading">
+      <h2 id="latest-heading">最近の投稿</h2>
+
+      <!-- JSで置き換え -->
+      <div id="latest-post">
+        <p>記事を読み込み中…</p>
+      </div>
+
+      <!-- JS無効時 -->
+      <noscript>
+        <p>最新記事を表示するにはJavaScriptを有効にしてください。</p>
+      </noscript>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <div data-include="/components/footer.html"></div>
 
-  <!-- JavaScriptコードの埋め込み -->
   <script src="/js/include.js" defer></script>
-
-  <!-- Scriptが動作しない場合の処理 -->
-  <noscript>
-    <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
-      JavaScriptが無効になっています。このサイトの一部機能が動作しない場合があります。
-    </div>
-  </noscript>
+  <script src="/js/latest.js" defer></script>
 
 </body>
 </html>
