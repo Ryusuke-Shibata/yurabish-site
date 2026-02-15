@@ -11,11 +11,11 @@ async function renderCategory(category) {
 
   container.innerHTML = filtered.map(p => `
     <article>
-      <h2>
+      <h1>
         <a href="/blog/post.html?post=${p.category}/${p.slug}">
           ${p.title}
         </a>
-      </h2>
+      </h1>
       <small>${p.date}</small>
       <p>${p.summary}</p>
     </article>
