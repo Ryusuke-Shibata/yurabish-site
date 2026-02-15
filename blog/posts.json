@@ -1,52 +1,52 @@
 [
   {
     "title": "MS-900学習ログ #4",
-    "url": "/blog/post.html?post=te/ms900/ms900_04",
+    "slug": "ms900/ms900_04",
+    "category": "te",
     "date": "2026-02-11",
-    "summary": "MS-900の学習まとめ、セキュリティ機能後編です。",
-    "category": "技術"
+    "summary": "MS-900の学習まとめ、セキュリティ機能後編です。"
   },
   {
     "title": "1年は冬から始まる",
-    "url": "/blog/post.html?post=lf/2026/diary_260204",
+    "slug": "2026/diary_260204",
+    "category": "lf",
     "date": "2026-02-04",
-    "summary": "寒い寒い1月の振り返りです。",
-    "category": "生活・日記"
+    "summary": "寒い寒い1月の振り返りです。"
   },
   {
     "title": "表示用HTMLの共通化",
-    "url": "/blog/post.html?post=mk/markdown_02",
+    "slug": "markdown_02",
+    "category": "mk",
     "date": "2026-01-31",
-    "summary": "更新省力化のためのHTMLの集約作業です。",
-    "category": "制作"
+    "summary": "更新省力化のためのHTMLの集約作業です。"
   },
   {
     "title": "画像を含んだ投稿",
-    "url": "/blog/post.html?post=mk/image_01",
+    "slug": "image_01",
+    "category": "mk",
     "date": "2026-01-25",
-    "summary": "画像投稿の実装です。",
-    "category": "制作"
+    "summary": "画像投稿の実装です。"
   },
   {
     "title": "MS-900学習ログ #3",
-    "url": "/blog/post.html?post=te/ms900/ms900_03",
+    "slug": "ms900/ms900_03",
+    "category": "te",
     "date": "2026-01-18",
-    "summary": "MS-900の学習まとめ、セキュリティ機能前編です。",
-    "category": "技術"
+    "summary": "MS-900の学習まとめ、セキュリティ機能前編です。"
   },
   {
     "title": "MS-900学習ログ #2",
-    "url": "/blog/post.html?post=te/ms900/ms900_02",
+    "slug": "ms900/ms900_02",
+    "category": "te",
     "date": "2026-01-11",
-    "summary": "MS-900の学習まとめ、ユーザー向けサービス編です。",
-    "category": "技術"
+    "summary": "MS-900の学習まとめ、ユーザー向けサービス編です。"
   },
   {
     "title": "ようこそ2026年へ",
-    "url": "/blog/post.html?post=lf/2026/diary_260104",
+    "slug": "/blog/post.html?post=lf/2026/diary_260104",
+    "category": "lf",
     "date": "2026-01-04",
-    "summary": "あけましておめでとうございます。",
-    "category": "生活・日記"
+    "summary": "あけましておめでとうございます。"
   },
   {
     "title": "未解決事件は終わらせないといけないから",
@@ -57,51 +57,51 @@
   },
   {
     "title": "Sairy Hub 更新ロードマップ",
-    "url": "/blog/post.html?post=mk/roadmap_01",
+    "slug": "roadmap_01",
+    "category": "mk",
     "date": "2025-12-20",
     "summary": "Sairy Hubをどのように更新していくかのロードマップです。",
-    "category": "制作"
   },
   {
     "title": "もう終わる12月",
-    "url": "/blog/post.html?post=lf/2025/diary_251215",
+    "slug": "/blog/post.html?post=lf/2025/diary_251215",
+    "category": "lf",
     "date": "2025-12-15",
-    "summary": "1年の振り返りと来年の目標についてです。",
-    "category": "生活・日記"
+    "summary": "1年の振り返りと来年の目標についてです。"
   },
   {
     "title": "共通部分のコンポーネント化",
-    "url": "/blog/post.html?post=mk/components",
+    "slug": "components",
+    "category": "mk",
     "date": "2025-12-09",
-    "summary": "JavaScriptによるコンポーネントのインクルードについてです。",
-    "category": "制作"
+    "summary": "JavaScriptによるコンポーネントのインクルードについてです。"
   },
   {
     "title": "Staffer Case:超能力推理アドベンチャー",
     "slug": "staffercase_review",
-    "category": "hb"
+    "category": "hb",
     "date": "2025-12-01",
     "summary": "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。"
   },
   {
     "title": "MS-900学習ログ #1",
-    "url": "/blog/post.html?post=te/ms900/ms900_01",
+    "slug": "ms900/ms900_01",
+    "category": "te",
     "date": "2025-11-21",
     "summary": "MS-900の学習まとめ、基礎編です。",
-    "category": "技術"
   },
   {
     "title": "個人サイト開設までの道のり",
-    "url": "/blog/post.html?post=mk/site_open",
+    "slug": "site_open",
+    "category": "mk",
     "date": "2025-11-12",
     "summary": "個人サイト開設の備忘です。",
-    "category": "制作"
   },
   {
     "title": "自己紹介（詳しめ）",
-    "url": "/blog/post.html?post=zz/about_me",
+    "slug": "/blog/post.html?post=zz/about_me",
+    "category": "lf",
     "date": "2025-11-03",
-    "summary": "プロフィールページよりも少し細かい自己紹介です。",
-    "category": "雑記"
+    "summary": "プロフィールページよりも少し細かい自己紹介です。"
   }
 ]
