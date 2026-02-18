@@ -1,5 +1,12 @@
 [
   {
+    "title": "HTMLの共通化",
+    "slug": "html_overview",
+    "category": "te",
+    "date": "2026-02-19",
+    "summary": "HTMLの基本構造の総まとめです。"
+  },
+  {
     "title": "MS-900学習ログ #4",
     "slug": "ms900/ms900_04",
     "category": "te",
