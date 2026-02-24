@@ -70,6 +70,13 @@
     "summary": "Sairy Hubをどのように更新していくかのロードマップです。"
   },
   {
+    "title": "Markdown活用化",
+    "slug": "markdown_01",
+    "category": "mk",
+    "date": "2026-01-31",
+    "summary": "更新省力化のためのMarkdown実装作業です。"
+  },
+  {
     "title": "もう終わる12月",
     "slug": "2025/diary_251215",
     "category": "lf",
