@@ -1,6 +1,6 @@
 ---
 title: Markdown活用
-date: 2025-MM-dd
+date: 2025-12-18
 category: 制作
 tags:
   - ブログ運用
