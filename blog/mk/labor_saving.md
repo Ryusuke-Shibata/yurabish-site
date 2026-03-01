@@ -1,6 +1,6 @@
 ---
 title: ブログ更新省力化のおさらい
-date: 2026-03-dd
+date: 2026-02-27
 category: 制作
 tags:
   - ブログ運用
