@@ -9,7 +9,7 @@ async function loadLatestPost() {
     const latest = posts[0];
 
     el.innerHTML = `
-      <a href="${latest.url}">
+      <a href="https://yurabish.com/blog/post?post=${latest.category}/${latest.slug}">
         <strong>${latest.title}</strong><br>
         <small>${latest.date}</small>
       </a>
