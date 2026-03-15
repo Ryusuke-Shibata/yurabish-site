@@ -9,26 +9,26 @@ body {
   line-height: 1.7;
 }
 
-article {
+.post {
   max-width: 720px;
   margin: auto;
   padding: 0 16px;
 }
 
-article img {
+.post img {
   max-width: 100%;
   height: auto;
 }
 
-article h2 {
+.post h2 {
   margin-top: 40px;
 }
 
-article h3 {
+.post h3 {
   margin-top: 28px;
 }
 
-article p {
+.post p {
   margin: 16px 0;
 }
 
