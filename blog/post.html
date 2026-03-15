@@ -14,21 +14,23 @@
 
   <!-- 記事本体 -->
   <main class="post">
+    <article class="post">
 
-    <!-- ▼ 追加：記事ヘッダー（CSSを壊さない） -->
-    <header class="post-header">
-      <h1 class="post-title" id="post-title"></h1>
-      <div class="post-meta">
-        <time id="post-date"></time>
-        <span class="category" id="post-category"></span>
+      <!-- 記事ヘッダー -->
+      <header class="post-header">
+        <h1 class="post-title" id="post-title"></h1>
+        <div class="post-meta">
+          <time id="post-date"></time>
+          <span class="category" id="post-category"></span>
+        </div>
+      </header>
+
+      <!-- ▼ Markdown本文 -->
+      <div class="post-contents" id="content">
+        <!-- ここにMarkdownの記事本文が入る -->
       </div>
-    </header>
 
-    <!-- ▼ Markdown本文 -->
-    <div id="content">
-      <!-- ここにMarkdownの記事本文が入る -->
-    </div>
-
+    </article>
   </main>
 
   <!-- 共通フッター -->
