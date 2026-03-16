@@ -1,5 +1,12 @@
 [
   {
+    "title": "CSSの基礎",
+    "slug": "css_base",
+    "category": "mk",
+    "date": "2026-03-16",
+    "summary": "基本的なCSSの実装編です。"
+  },
+  {
     "title": "Return of the Obra dinn",
     "slug": "obradinn_review",
     "category": "hb",
