@@ -50,3 +50,97 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ===== Desktop Mode ===== */
+
+body {
+
+background:#008080;
+overflow:hidden;
+
+}
+
+/* デスクトップ */
+
+.desktop {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fill,100px);
+
+gap:30px;
+
+padding:30px;
+
+height:calc(100vh - 100px);
+
+}
+
+/* アイコン */
+
+.desktop-icon {
+
+width:80px;
+
+text-align:center;
+
+}
+
+.desktop-icon a{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+padding:10px;
+
+border-radius:6px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.desktop-icon a:hover{
+
+background:rgba(255,255,255,.2);
+
+}
+
+.icon{
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+.desktop-icon span{
+
+font-size:14px;
+
+}
+
+/* タスクバー */
+
+footer {
+
+position:fixed;
+
+bottom:0;
+
+width:100%;
+
+background:#c0c0c0;
+
+padding:10px;
+
+border-top:
+
+2px solid #ffffff;
+
+}
