@@ -1,23 +1,115 @@
-async function renderCategory(category) {
+// ======================
+// カテゴリごとの記事一覧
+// ======================
+async function renderCategory(
+  category
+) {
 
-  const res = await fetch("/blog/posts.json");
-  const posts = await res.json();
+  try {
 
-  const filtered = posts
-    .filter(p => p.category === category)
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    const res =
+      await fetch(
+        "/data/posts.json",
+        {
+          cache: "no-cache"
+        }
+      );
 
-  const container = document.getElementById("posts");
+    if (!res.ok) {
 
-  container.innerHTML = filtered.map(p => `
-    <article>
-      <h3>
-        <a href="/blog/post.html?post=${p.category}/${p.slug}">
-          ${p.title}
-        </a>
-      </h3>
-      <small>${p.date}</small>
-      <p>${p.summary}</p>
-    </article>
-  `).join("");
+      throw new Error(
+        "posts.json取得失敗"
+      );
+
+    }
+
+    const posts =
+      await res.json();
+
+    const filtered =
+      posts
+        .filter(
+          p =>
+            p.category === category
+        )
+        .sort(
+          (a, b) =>
+            new Date(
+              b.date
+            ) -
+            new Date(
+              a.date
+            )
+        );
+
+    const container =
+      document.getElementById(
+        "posts"
+      );
+
+    if (
+      filtered.length === 0
+    ) {
+
+      container.innerHTML =
+        `
+        <p>
+          記事がありません
+        </p>
+        `;
+
+      return;
+
+    }
+
+    container.innerHTML =
+      filtered
+        .map(p => {
+
+          const url =
+            `/blog/post.html?post=/posts/${p.category}/${p.slug}.md`;
+
+          return `
+            <article class="post-card">
+
+              <h3>
+
+                <a href="${url}">
+                  ${p.title}
+                </a>
+
+              </h3>
+
+              <small>
+                ${p.date}
+              </small>
+
+              <p>
+                ${p.summary}
+              </p>
+
+            </article>
+          `;
+
+        })
+        .join("");
+
+  } catch(error) {
+
+    console.error(
+      "Category Error:",
+      error
+    );
+
+    document.getElementById(
+      "posts"
+    ).innerHTML =
+      `
+      <p>
+        読み込みに失敗しました
+      </p>
+      `;
+
+  }
+
 }
