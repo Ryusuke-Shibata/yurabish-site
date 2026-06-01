@@ -1,50 +1,50 @@
+// ======================
+// 記事一覧表示
+// ======================
 document.addEventListener(
+  "DOMContentLoaded",
 
-"DOMContentLoaded",
+  async () => {
 
-async()=>{
+    const list =
+      document.getElementById(
+        "posts-list"
+      );
 
-const list=
+    if (!list) {
+      return;
+    }
 
-document.getElementById(
-"posts-list"
+    const posts =
+      await getPosts();
+
+    list.innerHTML =
+      posts.map(post => {
+
+        const url =
+          `/blog/post?post=/posts/${post.category}/${post.slug}.md`;
+
+        return `
+          <article class="post-card">
+
+            <h2>
+              <a href="${url}">
+                ${post.title}
+              </a>
+            </h2>
+
+            <small>
+              ${post.date}
+            </small>
+
+            <p>
+              ${post.summary}
+            </p>
+
+          </article>
+        `;
+
+      }).join("");
+
+  }
 );
-
-if(!list) return;
-
-const posts=
-await getPosts();
-
-list.innerHTML=
-
-posts.map(post=>`
-
-<article class="post-card">
-
-<h2>
-
-<a href="${post.url}">
-
-${post.title}
-
-</a>
-
-</h2>
-
-<p>
-
-${post.summary}
-
-</p>
-
-<small>
-
-${post.date}
-
-</small>
-
-</article>
-
-`).join("");
-
-});
