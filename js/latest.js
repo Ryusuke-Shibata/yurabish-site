@@ -1,56 +1,48 @@
 // ======================
 // 最新記事表示
 // ======================
-
 document.addEventListener(
-
   "DOMContentLoaded",
 
-  async()=>{
+  async () => {
 
-    const target=
-
+    const target =
       document.getElementById(
         "latest-post"
       );
 
-    if(!target) return;
-
-    const posts=
-      await getPosts();
-
-    if(posts.length===0){
-
-      target.innerHTML=
-
-      `
-      <p>
-      記事がありません
-      </p>
-      `;
-
+    if (!target) {
       return;
-
     }
 
-    const latest=
+    const posts =
+      await getPosts();
+
+    if (posts.length === 0) {
+
+      target.innerHTML =
+        "<p>記事がありません</p>";
+
+      return;
+    }
+
+    const latest =
       posts[0];
 
-    target.innerHTML=
+    const url =
+      `/blog/post?post=/posts/${latest.category}/${latest.slug}.md`;
 
-    `
-    <a href="${latest.url}">
-      <strong>
-        ${latest.title}
-      </strong>
-
-      <br>
-
-      <small>
-        ${latest.date}
-      </small>
-
-    </a>
+    target.innerHTML = `
+      <a href="${url}">
+        <strong>
+          ${latest.title}
+        </strong>
+        <br>
+        <small>
+          ${latest.date}
+        </small>
+      </a>
     `;
 
-});
+  }
+);
