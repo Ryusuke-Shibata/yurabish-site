@@ -1,53 +1,106 @@
 <!DOCTYPE html>
-<html lang = "ja">
+<html lang="ja">
 
-<!-- ページ全体の定義 -->
 <head>
-  <meta charset = "UTF-8" />
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
-  <title>Sairy Hub - Life</title>
-  <link rel = "stylesheet" href = "/css/style.css" />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Sairy Hub - Life
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
+
 </head>
 
-<!-- 本文 -->
 <body>
-  <div data-include="/components/header.html"></div>
-  <main>
-    <!-- セクション（見出しとセット） -->
-    <section>
-      <h1>Life</h1>
-      <p>日記的な投稿や日々の発見など、雑多な記事を投稿します。</p>
+
+  <!-- 共通ヘッダー -->
+  <div
+    data-include="/components/header.html"
+  ></div>
+
+  <!-- カテゴリ情報 -->
+  <main
+    class="category-page"
+    data-category="lf"
+    data-title="Life"
+    data-description="日記的な投稿をしていきます。"
+  >
+
+    <!-- カテゴリ説明 -->
+    <section class="category-header">
+
+      <h1 id="category-title">
+      </h1>
+
+      <p id="category-description">
+      </p>
+
     </section>
 
     <!-- 記事一覧 -->
     <section class="category-articles">
-      <h2>Articles</h2>
-      <div id="posts"></div>
-      <script src="/js/category.js"></script>
-      <script>
-        renderCategory("lf");
-      </script>
+
+      <h2>
+        Articles
+      </h2>
+
+      <div id="posts">
+
+        <p>
+          読み込み中...
+        </p>
+
+      </div>
+
     </section>
+
   </main>
 
-  <div data-include="/components/footer.html"></div>
+  <!-- 共通フッター -->
+  <div
+    data-include="/components/footer.html"
+  ></div>
 
-  <!-- JavaScriptコードの埋め込み -->
+  <!-- JS -->
   <script
     src="/js/include.js"
     defer
   ></script>
+
   <script
-    src="/js/post.js"
+    src="/js/category.js"
     defer
   ></script>
 
-  <!-- Scriptが動作しない場合の処理 -->
+  <script
+    src="/js/category-page.js"
+    defer
+  ></script>
+
   <noscript>
-    <div style="background: #ffcccc; color: #000; padding: 1em; text-align: center;">
-      JavaScriptが無効になっています。このサイトの一部機能が動作しない場合があります。
+
+    <div
+      style="
+        background:#ffcccc;
+        padding:1em;
+        text-align:center;
+      "
+    >
+      JavaScriptが無効です
     </div>
+
   </noscript>
 
 </body>
+
 </html>
