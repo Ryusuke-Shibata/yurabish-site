@@ -1,23 +1,50 @@
-// ====== 一覧表示 ======
-async function loadArchive() {
+document.addEventListener(
 
-  const res = await fetch("/blog/posts.json");
-  const archive = await res.json();
+"DOMContentLoaded",
 
-  const container = document.getElementById("archive");
-  if(!container) return;
+async()=>{
 
-  container.innerHTML = archive.map(p => `
-    <article>
-      <h3>
-        <a href="/blog/post.html?post=${p.category}/${p.slug}">
-          ${p.title}
-        </a>
-      </h3>
-      <small>${p.date}</small>
-      <p>${p.summary}</p>
-    </article>
-  `).join("");
-}
+const list=
 
-document.addEventListener("DOMContentLoaded", loadArchive);
+document.getElementById(
+"posts-list"
+);
+
+if(!list) return;
+
+const posts=
+await getPosts();
+
+list.innerHTML=
+
+posts.map(post=>`
+
+<article class="post-card">
+
+<h2>
+
+<a href="${post.url}">
+
+${post.title}
+
+</a>
+
+</h2>
+
+<p>
+
+${post.summary}
+
+</p>
+
+<small>
+
+${post.date}
+
+</small>
+
+</article>
+
+`).join("");
+
+});
