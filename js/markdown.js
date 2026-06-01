@@ -1,64 +1,89 @@
-async function loadMarkdown() {
-  const params = new URLSearchParams(location.search);
-  const file = params.get("post");
+document.addEventListener(
+  "DOMContentLoaded",
 
-  if (!file) {
-    document.getElementById("content").textContent = "記事が指定されていません";
-    return;
-  }
+  async () => {
 
-  // ★ パスが変わった点に注意
-  const res = await fetch(`/blog/${file}.md`);
-  const raw = await res.text();
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
 
-  // BOM除去（超重要）
-  const text = raw.replace(/^\uFEFF/, "");
+    const file =
+      params.get(
+        "post"
+      );
 
-  // Front Matter を安全に分離
-  const match = text.match(/^\s*---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
+    if (!file) {
 
-  let meta = {};
-  let body = text;
+      document.getElementById(
+        "content"
+      ).innerHTML =
+        "<p>記事が見つかりません。</p>";
 
-  if (match) {
-    const metaText = match[1];
-    body = match[2];
+      return;
 
-    metaText.split("\n").forEach(line => {
-      const [key, ...rest] = line.split(":");
-      if (!key || rest.length === 0) return;
-      meta[key.trim()] = rest.join(":").trim();
-    });
-  }
-
-  /* ===== メタデータ反映 ===== */
-
-  // title
-  if (meta.title) {
-    document.title = meta.title;
-    const h1 = document.querySelector(".post-title");
-    if (h1) h1.textContent = meta.title;
-  }
-
-  // date
-  if (meta.date) {
-    const time = document.querySelector(".post-meta time");
-    if (time) {
-      time.dateTime = meta.date;
-      time.textContent = meta.date.replace(/-/g, "年") + "日";
     }
+
+    try {
+
+      const res =
+        await fetch(
+          file,
+          {
+            cache: "no-cache"
+          }
+        );
+
+      if (!res.ok) {
+
+        throw new Error(
+          "Markdown読込失敗"
+        );
+
+      }
+
+      const markdown =
+        await res.text();
+
+      document.getElementById(
+        "content"
+      ).innerHTML =
+        marked.parse(
+          markdown
+        );
+
+      const title =
+        markdown.match(
+          /^#\s+(.+)$/m
+        );
+
+      if (title) {
+
+        const titleText =
+          title[1];
+
+        document.title =
+          `${titleText} | SairyHub`;
+
+        document.getElementById(
+          "post-title"
+        ).textContent =
+          titleText;
+
+      }
+
+    } catch(error) {
+
+      console.error(
+        error
+      );
+
+      document.getElementById(
+        "content"
+      ).innerHTML =
+        "<p>記事を読み込めませんでした。</p>";
+
+    }
+
   }
-
-  // category
-  if (meta.category) {
-    const cat = document.querySelector(".post-meta .category");
-    if (cat) cat.textContent = meta.category;
-  }
-
-  // 本文
-  document.getElementById("content").innerHTML = marked.parse(body);
-}
-
-loadMarkdown();
-
-console.log(cleaned.slice(0, 50));
+);
