@@ -18,7 +18,7 @@ async function renderCategory(
     if (!res.ok) {
 
       throw new Error(
-        "posts.json取得失敗"
+        "posts取得失敗"
       );
 
     }
@@ -52,19 +52,15 @@ async function renderCategory(
     ) {
 
       container.innerHTML =
-        `
-        <p>
-          記事がありません
-        </p>
-        `;
+        "<p>記事がありません</p>";
 
       return;
 
     }
 
     container.innerHTML =
-      filtered
-        .map(p => {
+      filtered.map(
+        p => {
 
           const url =
             `/blog/post.html?post=/posts/${p.category}/${p.slug}.md`;
@@ -91,24 +87,14 @@ async function renderCategory(
             </article>
           `;
 
-        })
-        .join("");
+        }
+      ).join("");
 
   } catch(error) {
 
     console.error(
-      "Category Error:",
       error
     );
-
-    document.getElementById(
-      "posts"
-    ).innerHTML =
-      `
-      <p>
-        読み込みに失敗しました
-      </p>
-      `;
 
   }
 
