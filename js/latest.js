@@ -1,22 +1,56 @@
-// ====== 最新記事1件表示 ======
-async function loadLatestPost() {
-  const el = document.getElementById("latest-post");
-  if (!el) return;
+// ======================
+// 最新記事表示
+// ======================
 
-  try {
-    const res = await fetch("./blog/posts.json", { cache: "no-cache" });
-    const posts = await res.json();
-    const latest = posts[0];
+document.addEventListener(
 
-    el.innerHTML = `
-      <a href="https://yurabish.com/blog/post?post=${latest.category}/${latest.slug}">
-        <strong>${latest.title}</strong><br>
-        <small>${latest.date}</small>
-      </a>
+  "DOMContentLoaded",
+
+  async()=>{
+
+    const target=
+
+      document.getElementById(
+        "latest-post"
+      );
+
+    if(!target) return;
+
+    const posts=
+      await getPosts();
+
+    if(posts.length===0){
+
+      target.innerHTML=
+
+      `
+      <p>
+      記事がありません
+      </p>
+      `;
+
+      return;
+
+    }
+
+    const latest=
+      posts[0];
+
+    target.innerHTML=
+
+    `
+    <a href="${latest.url}">
+      <strong>
+        ${latest.title}
+      </strong>
+
+      <br>
+
+      <small>
+        ${latest.date}
+      </small>
+
+    </a>
     `;
-  } catch (err) {
-    console.error(err);
-  }
-}
 
-document.addEventListener("DOMContentLoaded", loadLatestPost);
+});
