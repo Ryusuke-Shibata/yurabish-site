@@ -28,18 +28,21 @@
     data-include="/components/header.html"
   ></div>
 
-  <!-- 本文 -->
-  <main class="category-page">
+  <!-- カテゴリ情報 -->
+  <main
+    class="category-page"
+    data-category="hb"
+    data-title="Hobby"
+    data-description="プレイしたゲームや趣味についての記事を投稿していきます。"
+  >
 
-    <!-- 説明 -->
+    <!-- カテゴリ説明 -->
     <section class="category-header">
 
-      <h1>
-        Hobby
+      <h1 id="category-title">
       </h1>
 
-      <p>
-        プレイしたゲームや趣味についての記事を投稿していきます。
+      <p id="category-description">
       </p>
 
     </section>
@@ -51,9 +54,7 @@
         Articles
       </h2>
 
-      <div
-        id="posts"
-      >
+      <div id="posts">
 
         <p>
           読み込み中...
@@ -70,7 +71,7 @@
     data-include="/components/footer.html"
   ></div>
 
-  <!-- JavaScript -->
+  <!-- JS -->
   <script
     src="/js/include.js"
     defer
@@ -81,34 +82,21 @@
     defer
   ></script>
 
-  <script defer>
+  <script
+    src="/js/category-page.js"
+    defer
+  ></script>
 
-    document.addEventListener(
-      "DOMContentLoaded",
-
-      () => {
-
-        renderCategory(
-          "hb"
-        );
-
-      }
-    );
-
-  </script>
-
-  <!-- JS無効時 -->
   <noscript>
 
     <div
       style="
         background:#ffcccc;
-        color:#000;
         padding:1em;
         text-align:center;
       "
     >
-      JavaScriptが無効になっています。
+      JavaScriptが無効です
     </div>
 
   </noscript>
