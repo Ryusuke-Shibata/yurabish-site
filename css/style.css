@@ -1,21 +1,39 @@
 /* ========================================
    Base
+   1930年代カートゥーン風
 ======================================== */
 
 body{
 
     margin:0;
 
-    background:#f4f0e4;
+    padding:0;
+
+    background:#f7f2e4;
 
     color:#222;
 
     font-family:
 
-        Georgia,
-        serif;
+        "Trebuchet MS",
+        sans-serif;
+
+    line-height:1.7;
+
+    /* 古い紙感 */
+
+    background-image:
+
+        radial-gradient(
+            rgba(0,0,0,.03) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        10px 10px;
 
 }
+
 
 
 /* ========================================
@@ -33,39 +51,134 @@ main{
 }
 
 
+
 /* ========================================
    Header
 ======================================== */
 
 .site-header{
 
-    margin:2rem auto;
+    margin:
 
-    padding:2rem;
+        2rem auto
+        4rem;
+
+    padding:
+
+        2rem;
+
+    background:
+
+        #fffef8;
 
     border:
 
-        5px double black;
+        5px solid black;
 
-    background:white;
+    border-radius:
+
+        45px;
+
+    box-shadow:
+
+        10px 10px 0 black;
+
+    position:relative;
 
 }
 
+
+/* 左上の丸 */
+
+.site-header::before{
+
+    content:"";
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:black;
+
+    position:absolute;
+
+    top:-10px;
+
+    left:-10px;
+
+}
+
+
+/* 右下の丸 */
+
+.site-header::after{
+
+    content:"";
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    background:black;
+
+    position:absolute;
+
+    right:-8px;
+
+    bottom:-8px;
+
+}
+
+
+
+/* ========================================
+   Logo
+======================================== */
 
 .site-logo{
 
-    font-size:3rem;
+    display:block;
 
     text-align:center;
 
+    font-size:3.5rem;
+
+    font-weight:bold;
+
+    color:black;
+
+    letter-spacing:.12em;
+
 }
 
+
+.site-subtitle{
+
+    text-align:center;
+
+    margin-top:.5rem;
+
+    font-style:italic;
+
+}
+
+
+
+/* ========================================
+   Navigation
+======================================== */
 
 .main-nav{
 
     display:flex;
 
     justify-content:center;
+
+    flex-wrap:wrap;
 
     gap:1rem;
 
@@ -76,13 +189,26 @@ main{
 
 .main-nav a{
 
+    background:white;
+
     border:
 
-        2px solid black;
+        4px solid black;
+
+    border-radius:
+
+        999px;
 
     padding:
 
-        .5rem 1rem;
+        .7rem
+        1.3rem;
+
+    color:black;
+
+    font-weight:bold;
+
+    transition:.2s;
 
 }
 
@@ -91,43 +217,92 @@ main{
 
     transform:
 
-        translateY(-3px);
+        scale(1.05)
+        rotate(-4deg);
 
 }
 
 
+
 /* ========================================
-   Cards
+   Article Card
 ======================================== */
 
 .article-card{
 
-    margin-bottom:2rem;
+    position:relative;
 
-    padding:2rem;
+    margin-bottom:3rem;
+
+    padding:
+
+        2rem;
+
+    background:
+
+        white;
 
     border:
 
-        3px solid black;
+        5px solid black;
 
-    background:white;
+    border-radius:
 
-    position:relative;
+        35px;
+
+    box-shadow:
+
+        8px 8px 0 black;
+
+    transition:.2s;
 
 }
 
 
+/* カートゥーンの吹き出し */
+
 .article-card::before{
 
-    content:
-
-        "Exhibit";
+    content:"";
 
     position:absolute;
 
-    top:-12px;
+    width:30px;
 
-    left:20px;
+    height:30px;
+
+    bottom:-20px;
+
+    left:40px;
+
+    background:white;
+
+    border-left:
+
+        5px solid black;
+
+    border-bottom:
+
+        5px solid black;
+
+    transform:
+
+        rotate(-45deg);
+
+}
+
+
+/* 展示番号風 */
+
+.article-card::after{
+
+    content:"LOG";
+
+    position:absolute;
+
+    top:-15px;
+
+    right:25px;
 
     background:black;
 
@@ -135,7 +310,28 @@ main{
 
     padding:
 
-        .3rem .8rem;
+        .4rem .8rem;
+
+    border-radius:
+
+        999px;
+
+}
+
+
+.article-card:nth-child(odd){
+
+    transform:
+
+        rotate(-1deg);
+
+}
+
+.article-card:nth-child(even){
+
+    transform:
+
+        rotate(1deg);
 
 }
 
@@ -144,9 +340,48 @@ main{
 
     transform:
 
-        scale(1.02);
+        scale(1.03)
+        rotate(-2deg);
 
 }
+
+
+
+/* ========================================
+   Tag
+======================================== */
+
+.card-tags{
+
+    margin-top:1rem;
+
+}
+
+
+.card-tags span{
+
+    display:inline-block;
+
+    background:#f6f1e4;
+
+    border:
+
+        3px solid black;
+
+    border-radius:
+
+        999px;
+
+    padding:
+
+        .2rem .7rem;
+
+    margin-right:
+
+        .5rem;
+
+}
+
 
 
 /* ========================================
@@ -155,16 +390,30 @@ main{
 
 .post{
 
-    background:white;
+    position:relative;
 
-    padding:3rem;
+    background:white;
 
     border:
 
-        5px double black;
+        5px solid black;
+
+    border-radius:
+
+        40px;
+
+    padding:
+
+        3rem;
+
+    box-shadow:
+
+        10px 10px 0 black;
 
 }
 
+
+/* スタンプ */
 
 .post-stamp{
 
@@ -172,17 +421,55 @@ main{
 
     border:
 
-        3px solid black;
+        4px dashed black;
 
     padding:
 
         .5rem 1rem;
 
+    margin-bottom:1rem;
+
     transform:
 
-        rotate(-5deg);
+        rotate(-6deg);
+
+    font-weight:bold;
 
 }
+
+
+
+/* 見出し */
+
+.post-contents h2{
+
+    display:inline-block;
+
+    padding:
+
+        .2rem .8rem;
+
+    border-bottom:
+
+        4px solid black;
+
+}
+
+
+.post-contents img{
+
+    width:100%;
+
+    border:
+
+        4px solid black;
+
+    border-radius:
+
+        20px;
+
+}
+
 
 
 /* ========================================
@@ -191,14 +478,60 @@ main{
 
 .footer-box{
 
-    margin-top:5rem;
+    position:relative;
 
-    padding:2rem;
+    margin:
+
+        5rem auto
+        2rem;
+
+    padding:
+
+        2rem;
 
     border:
 
-        5px double black;
+        5px solid black;
+
+    border-radius:
+
+        35px;
+
+    background:white;
 
     text-align:center;
+
+    box-shadow:
+
+        8px 8px 0 black;
+
+}
+
+
+.footer-box::before{
+
+    content:"THE END";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:
+
+        translateX(-50%);
+
+    background:black;
+
+    color:white;
+
+    padding:
+
+        .4rem 1rem;
+
+    border-radius:
+
+        999px;
 
 }
