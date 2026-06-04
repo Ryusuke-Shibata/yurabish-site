@@ -225,3 +225,187 @@ a{
     }
 
 }
+
+/* ========================================
+   Header
+======================================== */
+
+.site-header{
+
+    margin-bottom:4rem;
+
+    padding:2rem;
+
+    border:
+
+        3px solid white;
+
+}
+
+
+.site-logo{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    letter-spacing:.2em;
+
+}
+
+
+.site-subtitle{
+
+    text-align:center;
+
+    opacity:.7;
+
+}
+
+
+.main-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+    margin-top:2rem;
+
+}
+
+
+.main-nav a{
+
+    padding:
+
+        .7rem
+        1.2rem;
+
+    border:
+
+        2px solid #555;
+
+}
+
+
+.main-nav a:hover{
+
+    border-color:white;
+
+}
+
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.footer-box{
+
+    margin-top:6rem;
+
+    padding:2rem;
+
+    border-top:
+
+        3px solid white;
+
+}
+
+
+.status-window{
+
+    padding:1rem;
+
+    border:
+
+        2px solid #555;
+
+}
+
+
+.status-window ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+/* ========================================
+   Post
+======================================== */
+
+.post-window{
+
+    border:
+
+        3px solid white;
+
+    padding:3rem;
+
+}
+
+
+.post-label{
+
+    display:inline-block;
+
+    padding:
+
+        .3rem
+        .8rem;
+
+    background:white;
+
+    color:black;
+
+    margin-bottom:1rem;
+
+}
+
+
+.post-meta{
+
+    opacity:.6;
+
+    margin-bottom:2rem;
+
+}
+
+
+.post-contents h2{
+
+    margin-top:3rem;
+
+}
+
+
+.post-contents img{
+
+    width:100%;
+
+}
+
+
+.post-contents pre{
+
+    overflow:auto;
+
+    padding:1rem;
+
+    border:
+
+        1px solid #555;
+
+}
