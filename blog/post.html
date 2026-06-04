@@ -4,231 +4,113 @@
 
 <head>
 
-  <!-- ======================================
-       基本設定
-  ======================================= -->
+    <meta charset="UTF-8">
 
-  <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <meta
-    name="viewport"
-    content="
-      width=device-width,
-      initial-scale=1.0
-    "
-  >
+    <title id="page-title">
 
-  <!-- ======================================
-       記事タイトル
-       
-       JSで上書きされる
-  ======================================= -->
+        Loading...
 
-  <title
-    id="page-title"
-  >
+    </title>
 
-    Loading...
-
-  </title>
-
-
-
-  <!-- ======================================
-       共通CSS
-  ======================================= -->
-
-  <link
-    rel="stylesheet"
-    href="/css/style.css"
-  >
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
 
 </head>
 
 <body>
 
 
-  <!-- ======================================
-       共通ヘッダー
+    <!-- 共通ヘッダー -->
 
-       include.jsで読み込む
-  ======================================= -->
+    <div data-include="/components/header.html"></div>
 
-  <div
-    data-include=
-    "/components/header.html"
-  >
-  </div>
 
+    <!-- ======================
+         記事
+    ======================= -->
 
+    <main>
 
-  <!-- ======================================
-       記事全体
-  ======================================= -->
 
-  <main
-    class="post-page"
-  >
+        <article class="post-window">
 
 
+            <!-- 記事情報 -->
 
-    <!-- ==================================
-         記事本体
-    =================================== -->
+            <header class="post-header">
 
-    <article
-      class="post"
-    >
 
+                <div class="post-label">
 
+                    ARTICLE
 
-      <!-- ==============================
-           記事ヘッダー
-      =============================== -->
+                </div>
 
-      <header
-        class="post-header"
-      >
 
+                <h1
+                    id="post-title"
+                ></h1>
 
 
-        <!-- ==========================
-             飾りラベル
-        =========================== -->
+                <div class="post-meta">
 
-        <div
-          class="post-stamp"
-        >
+                    <time
+                        id="post-date"
+                    ></time>
 
-          Exploration Log
+                    <span
+                        id="post-category"
+                    ></span>
 
-        </div>
+                </div>
 
 
+            </header>
 
-        <!-- ==========================
-             記事タイトル
-        =========================== -->
 
-        <h1
-          class="post-title"
-          id="post-title"
-        >
-        </h1>
 
+            <!-- Markdown本文 -->
 
+            <div
+                class="post-contents"
+                id="content"
+            >
 
-        <!-- ==========================
-             日付＋カテゴリ
-        =========================== -->
+            </div>
 
-        <div
-          class="post-meta"
-        >
 
-          <time
-            id="post-date"
-          >
-          </time>
+        </article>
 
-          <span
-            class="category"
-            id="post-category"
-          >
-          </span>
 
-        </div>
+    </main>
 
-      </header>
 
+    <!-- 共通フッター -->
 
+    <div data-include="/components/footer.html"></div>
 
-      <!-- ==============================
-           Markdown本文表示領域
 
-           markdown.jsが
-           本文をここへ挿入する
-      =============================== -->
+    <!-- JS -->
 
-      <div
-        class="post-contents"
-        id="content"
-      >
+    <script
+        src="/js/include.js"
+        defer
+    ></script>
 
-        <p>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-          読み込み中...
+    <script
+        src="/js/markdown.js"
+        defer
+    ></script>
 
-        </p>
-
-      </div>
-
-    </article>
-
-  </main>
-
-
-
-  <!-- ======================================
-       共通フッター
-  ======================================= -->
-
-  <div
-    data-include=
-    "/components/footer.html"
-  >
-  </div>
-
-
-
-  <!-- ======================================
-       JavaScript
-  ======================================= -->
-
-  <!-- 共通パーツ -->
-
-  <script
-    src="/js/include.js"
-    defer
-  ></script>
-
-
-  <!-- Markdown変換ライブラリ -->
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
-    defer
-  ></script>
-
-
-  <!-- Markdown表示処理 -->
-
-  <script
-    src="/js/markdown.js"
-    defer
-  ></script>
-
-
-
-  <!-- ======================================
-       JS無効時
-  ======================================= -->
-
-  <noscript>
-
-    <div
-      style="
-        background:#ffcccc;
-        padding:1rem;
-        text-align:center;
-      "
-    >
-
-      JavaScriptが無効です
-
-    </div>
-
-  </noscript>
 
 </body>
 
