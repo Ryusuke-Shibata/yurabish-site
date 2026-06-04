@@ -3,10 +3,6 @@
 
 <head>
 
-    <!-- ======================
-         基本設定
-    ======================= -->
-
     <meta charset="UTF-8">
 
     <meta
@@ -14,62 +10,11 @@
         content="width=device-width, initial-scale=1"
     >
 
-    <title>Sairy Hub</title>
+    <title>
 
+        Sairy Hub
 
-    <!-- ======================
-         SEO
-    ======================= -->
-
-    <meta
-        name="description"
-        content="Sairy Hub | 技術・趣味・制作・日常の記録サイト"
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://yurabish.com"
-    >
-
-
-    <!-- ======================
-         OGP
-    ======================= -->
-
-    <meta
-        property="og:title"
-        content="Sairy Hub"
-    >
-
-    <meta
-        property="og:description"
-        content="Records & Strange Logs"
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:url"
-        content="https://yurabish.com"
-    >
-
-    <meta
-        property="og:image"
-        content="https://yurabish.com/img/ogp.png"
-    >
-
-
-    <!-- ======================
-         CSS
-    ======================= -->
+    </title>
 
     <link
         rel="stylesheet"
@@ -80,27 +25,21 @@
 
 <body>
 
-
-    <!-- ======================
-         共通ヘッダー
-    ======================= -->
+    <!-- 共通ヘッダー -->
 
     <div data-include="/components/header.html"></div>
 
 
-
-    <!-- ======================
-         メインコンテンツ
-    ======================= -->
+    <!-- =====================
+         Main
+    ====================== -->
 
     <main id="main-content">
 
 
-        <!-- ======================
-             ヒーロー
-        ======================= -->
+        <!-- サイト説明 -->
 
-        <section class="hero-box">
+        <section class="storage-intro">
 
             <h1>
 
@@ -110,169 +49,153 @@
 
             <p>
 
-                Welcome to my strange little corner
+                物置の隅に置かれた
+                技術・趣味・制作記録。
 
             </p>
 
             <p>
 
-                技術・趣味・制作ログ・思いつきなどを置いています。
+                必要なものも、
+                そうでもないものも、
+                いろいろ置いてあります。
 
             </p>
 
         </section>
 
 
+        <!-- 部屋マップ -->
 
-        <!-- ======================
-             最新記事
-        ======================= -->
-
-        <section class="showcase">
-
-            <div class="section-label">
-
-                NOW SHOWING
-
-            </div>
-
-
-            <!-- JS置換対象 -->
-
-            <div id="latest-post">
-
-                <article class="featured-card">
-
-                    <h2>
-
-                        Loading...
-
-                    </h2>
-
-                    <p>
-
-                        記事を読み込み中...
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ======================
-             カテゴリ
-        ======================= -->
-
-        <section class="category-grid">
+        <section class="storage-map">
 
 
             <a
-                class="category-card"
                 href="/blog/te"
+                class="storage-box tech"
             >
 
-                <div class="icon">
+                <div>
 
                     📺
 
                 </div>
 
-                <h3>
+                <h2>
 
                     Tech Reel
 
-                </h3>
+                </h2>
 
-                <p>
+                <small>
 
                     技術・資格・学習ログ
 
-                </p>
+                </small>
 
             </a>
 
 
-
             <a
-                class="category-card"
                 href="/blog/hb"
+                class="storage-box hobby"
             >
 
-                <div class="icon">
+                <div>
 
                     🎮
 
                 </div>
 
-                <h3>
+                <h2>
 
                     Hobby Film
 
-                </h3>
+                </h2>
 
-                <p>
+                <small>
 
                     ゲーム・趣味
 
-                </p>
+                </small>
 
             </a>
 
 
-
             <a
-                class="category-card"
                 href="/blog/mk"
+                class="storage-box make"
             >
 
-                <div class="icon">
+                <div>
 
                     🔧
 
                 </div>
 
-                <h3>
+                <h2>
 
                     Workshop
 
-                </h3>
+                </h2>
 
-                <p>
+                <small>
 
                     制作・改善ログ
 
-                </p>
+                </small>
 
             </a>
 
 
-
             <a
-                class="category-card"
                 href="/blog/lf"
+                class="storage-box life"
             >
 
-                <div class="icon">
+                <div>
 
                     📓
 
                 </div>
 
-                <h3>
+                <h2>
 
                     Diary Notes
 
-                </h3>
+                </h2>
 
-                <p>
+                <small>
 
                     日記・雑記
 
-                </p>
+                </small>
+
+            </a>
+
+
+            <a
+                href="/blog/archives"
+                class="storage-box archive"
+            >
+
+                <div>
+
+                    📦
+
+                </div>
+
+                <h2>
+
+                    Film Shelf
+
+                </h2>
+
+                <small>
+
+                    全記事一覧
+
+                </small>
 
             </a>
 
@@ -281,39 +204,26 @@
 
 
 
-        <!-- ======================
-             アーカイブ導線
-        ======================= -->
+        <!-- 最新記事 -->
 
-        <section class="random-box">
+        <section class="today-found">
 
-            <div class="section-label">
+            <div class="found-label">
 
-                FILM SHELF
+                TODAY FOUND
 
             </div>
 
-            <article class="featured-card">
 
-                <h3>
-
-                    Archive
-
-                </h3>
+            <div id="latest-post">
 
                 <p>
 
-                    全記事一覧はこちら
+                    読み込み中...
 
                 </p>
 
-                <a href="/blog/archives">
-
-                    Open →
-
-                </a>
-
-            </article>
+            </div>
 
         </section>
 
@@ -322,17 +232,11 @@
 
 
 
-    <!-- ======================
-         共通フッター
-    ======================= -->
+    <!-- 共通フッター -->
 
     <div data-include="/components/footer.html"></div>
 
 
-
-    <!-- ======================
-         JavaScript
-    ======================= -->
 
     <script
         src="/js/include.js"
@@ -343,28 +247,6 @@
         src="/js/latest.js"
         defer
     ></script>
-
-
-
-    <!-- ======================
-         JS無効時
-    ======================= -->
-
-    <noscript>
-
-        <div
-            style="
-                background:#ffcccc;
-                padding:1rem;
-                text-align:center;
-            "
-        >
-
-            JavaScriptが無効になっています。
-
-        </div>
-
-    </noscript>
 
 
 </body>
