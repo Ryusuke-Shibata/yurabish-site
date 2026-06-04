@@ -1,155 +1,372 @@
-<main id="main-content">
+<!DOCTYPE html>
+<html lang="ja">
 
-    <!-- ヒーロー -->
-    <section class="hero-box">
+<head>
 
-        <h1>Sairy Hub</h1>
+    <!-- ======================
+         基本設定
+    ======================= -->
 
-        <p>
-            Welcome to my strange little corner
-        </p>
+    <meta charset="UTF-8">
 
-    </section>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Sairy Hub</title>
 
 
-    <!-- 最新記事 -->
+    <!-- ======================
+         SEO
+    ======================= -->
 
-    <section class="showcase">
+    <meta
+        name="description"
+        content="Sairy Hub | 技術・趣味・制作・日常の記録サイト"
+    >
 
-        <div class="section-label">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-            NOW SHOWING
+    <link
+        rel="canonical"
+        href="https://yurabish.com"
+    >
 
-        </div>
 
-        <article class="featured-card">
+    <!-- ======================
+         OGP
+    ======================= -->
 
-            <span class="new-stamp">
+    <meta
+        property="og:title"
+        content="Sairy Hub"
+    >
 
-                NEW
+    <meta
+        property="og:description"
+        content="Records & Strange Logs"
+    >
 
-            </span>
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-            <h2>
+    <meta
+        property="og:url"
+        content="https://yurabish.com"
+    >
 
-                CSSの実装 #1
+    <meta
+        property="og:image"
+        content="https://yurabish.com/img/ogp.png"
+    >
 
-            </h2>
+
+    <!-- ======================
+         CSS
+    ======================= -->
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ======================
+         共通ヘッダー
+    ======================= -->
+
+    <div data-include="/components/header.html"></div>
+
+
+
+    <!-- ======================
+         メインコンテンツ
+    ======================= -->
+
+    <main id="main-content">
+
+
+        <!-- ======================
+             ヒーロー
+        ======================= -->
+
+        <section class="hero-box">
+
+            <h1>
+
+                Sairy Hub
+
+            </h1>
 
             <p>
 
-                CSS実装の記録と試行錯誤
+                Welcome to my strange little corner
 
             </p>
 
-            <a href="#">
+            <p>
 
-                Read →
+                技術・趣味・制作ログ・思いつきなどを置いています。
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ======================
+             最新記事
+        ======================= -->
+
+        <section class="showcase">
+
+            <div class="section-label">
+
+                NOW SHOWING
+
+            </div>
+
+
+            <!-- JS置換対象 -->
+
+            <div id="latest-post">
+
+                <article class="featured-card">
+
+                    <h2>
+
+                        Loading...
+
+                    </h2>
+
+                    <p>
+
+                        記事を読み込み中...
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================
+             カテゴリ
+        ======================= -->
+
+        <section class="category-grid">
+
+
+            <a
+                class="category-card"
+                href="/blog/te"
+            >
+
+                <div class="icon">
+
+                    📺
+
+                </div>
+
+                <h3>
+
+                    Tech Reel
+
+                </h3>
+
+                <p>
+
+                    技術・資格・学習ログ
+
+                </p>
 
             </a>
 
-        </article>
-
-    </section>
 
 
-    <!-- カテゴリ -->
+            <a
+                class="category-card"
+                href="/blog/hb"
+            >
 
-    <section class="category-grid">
+                <div class="icon">
 
-        <a class="category-card" href="/blog/te">
+                    🎮
 
-            <div class="icon">
+                </div>
 
-                📺
+                <h3>
+
+                    Hobby Film
+
+                </h3>
+
+                <p>
+
+                    ゲーム・趣味
+
+                </p>
+
+            </a>
+
+
+
+            <a
+                class="category-card"
+                href="/blog/mk"
+            >
+
+                <div class="icon">
+
+                    🔧
+
+                </div>
+
+                <h3>
+
+                    Workshop
+
+                </h3>
+
+                <p>
+
+                    制作・改善ログ
+
+                </p>
+
+            </a>
+
+
+
+            <a
+                class="category-card"
+                href="/blog/lf"
+            >
+
+                <div class="icon">
+
+                    📓
+
+                </div>
+
+                <h3>
+
+                    Diary Notes
+
+                </h3>
+
+                <p>
+
+                    日記・雑記
+
+                </p>
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- ======================
+             アーカイブ導線
+        ======================= -->
+
+        <section class="random-box">
+
+            <div class="section-label">
+
+                FILM SHELF
 
             </div>
 
-            <h3>
+            <article class="featured-card">
 
-                Tech Reel
+                <h3>
 
-            </h3>
+                    Archive
 
-        </a>
+                </h3>
 
-        <a class="category-card" href="/blog/hb">
+                <p>
 
-            <div class="icon">
+                    全記事一覧はこちら
 
-                🎮
+                </p>
 
-            </div>
+                <a href="/blog/archives">
 
-            <h3>
+                    Open →
 
-                Hobby Film
+                </a>
 
-            </h3>
+            </article>
 
-        </a>
-
-        <a class="category-card" href="/blog/mk">
-
-            <div class="icon">
-
-                🔧
-
-            </div>
-
-            <h3>
-
-                Workshop
-
-            </h3>
-
-        </a>
-
-        <a class="category-card" href="/blog/lf">
-
-            <div class="icon">
-
-                📓
-
-            </div>
-
-            <h3>
-
-                Diary Notes
-
-            </h3>
-
-        </a>
-
-    </section>
+        </section>
 
 
-    <!-- ランダム記事 -->
+    </main>
 
-    <section class="random-box">
 
-        <div class="section-label">
 
-            RANDOM PICK
+    <!-- ======================
+         共通フッター
+    ======================= -->
+
+    <div data-include="/components/footer.html"></div>
+
+
+
+    <!-- ======================
+         JavaScript
+    ======================= -->
+
+    <script
+        src="/js/include.js"
+        defer
+    ></script>
+
+    <script
+        src="/js/latest.js"
+        defer
+    ></script>
+
+
+
+    <!-- ======================
+         JS無効時
+    ======================= -->
+
+    <noscript>
+
+        <div
+            style="
+                background:#ffcccc;
+                padding:1rem;
+                text-align:center;
+            "
+        >
+
+            JavaScriptが無効になっています。
 
         </div>
 
-        <article>
+    </noscript>
 
-            <h3>
 
-                Return of the Obra Dinn
+</body>
 
-            </h3>
-
-            <p>
-
-                「船員全員の死因を探す」
-
-            </p>
-
-        </article>
-
-    </section>
-
-</main>
+</html>
