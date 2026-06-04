@@ -30,172 +30,137 @@
     <div data-include="/components/header.html"></div>
 
 
-    <!-- =====================
-         Main
-    ====================== -->
-
-    <main id="main-content">
+    <main>
 
 
-        <!-- サイト説明 -->
+        <!-- タイトル画面 -->
 
-        <section class="storage-intro">
+        <section class="hero">
 
             <h1>
 
-                Sairy Hub
+                SAIRY HUB
 
             </h1>
 
             <p>
 
-                物置の隅に置かれた
-                技術・趣味・制作記録。
-
-            </p>
-
-            <p>
-
-                必要なものも、
-                そうでもないものも、
-                いろいろ置いてあります。
+                Records & Strange Logs
 
             </p>
 
         </section>
 
 
-        <!-- 部屋マップ -->
 
-        <section class="storage-map">
+        <!-- カテゴリ -->
+
+        <section class="menu-grid">
 
 
             <a
                 href="/blog/te"
-                class="storage-box tech"
+                class="menu-card"
             >
 
-                <div>
+                <span>
 
-                    📺
+                    ▶
 
-                </div>
+                </span>
 
                 <h2>
 
-                    Tech Reel
+                    Knowledge
 
                 </h2>
 
-                <small>
+                <p>
 
                     技術・資格・学習ログ
 
-                </small>
+                </p>
 
             </a>
+
 
 
             <a
                 href="/blog/hb"
-                class="storage-box hobby"
+                class="menu-card"
             >
 
-                <div>
+                <span>
 
-                    🎮
+                    ▶
 
-                </div>
+                </span>
 
                 <h2>
 
-                    Hobby Film
+                    Inventory
 
                 </h2>
 
-                <small>
+                <p>
 
-                    ゲーム・趣味
+                    趣味・ゲーム・好きなもの
 
-                </small>
+                </p>
 
             </a>
+
 
 
             <a
                 href="/blog/mk"
-                class="storage-box make"
+                class="menu-card"
             >
 
-                <div>
+                <span>
 
-                    🔧
+                    ▶
 
-                </div>
+                </span>
 
                 <h2>
 
-                    Workshop
+                    Crafting
 
                 </h2>
 
-                <small>
+                <p>
 
-                    制作・改善ログ
+                    制作・開発ログ
 
-                </small>
+                </p>
 
             </a>
+
 
 
             <a
                 href="/blog/lf"
-                class="storage-box life"
+                class="menu-card"
             >
 
-                <div>
+                <span>
 
-                    📓
+                    ▶
 
-                </div>
+                </span>
 
                 <h2>
 
-                    Diary Notes
+                    Journal
 
                 </h2>
 
-                <small>
+                <p>
 
                     日記・雑記
 
-                </small>
-
-            </a>
-
-
-            <a
-                href="/blog/archives"
-                class="storage-box archive"
-            >
-
-                <div>
-
-                    📦
-
-                </div>
-
-                <h2>
-
-                    Film Shelf
-
-                </h2>
-
-                <small>
-
-                    全記事一覧
-
-                </small>
+                </p>
 
             </a>
 
@@ -206,24 +171,36 @@
 
         <!-- 最新記事 -->
 
-        <section class="today-found">
+        <section class="quest-box">
 
-            <div class="found-label">
+            <div class="quest-title">
 
-                TODAY FOUND
+                NEW QUEST
 
             </div>
-
 
             <div id="latest-post">
 
-                <p>
-
-                    読み込み中...
-
-                </p>
+                読み込み中...
 
             </div>
+
+        </section>
+
+
+
+        <!-- Archive -->
+
+        <section>
+
+            <a
+                href="/blog/archives"
+                class="archive-button"
+            >
+
+                Open Archive
+
+            </a>
 
         </section>
 
@@ -231,12 +208,7 @@
     </main>
 
 
-
-    <!-- 共通フッター -->
-
     <div data-include="/components/footer.html"></div>
-
-
 
     <script
         src="/js/include.js"
@@ -247,7 +219,6 @@
         src="/js/latest.js"
         defer
     ></script>
-
 
 </body>
 
