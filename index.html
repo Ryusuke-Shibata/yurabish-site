@@ -1,186 +1,155 @@
-<!DOCTYPE html>
-<html lang="ja">
+<main id="main-content">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ヒーロー -->
+    <section class="hero-box">
 
-  <title>Sairy Hub</title>
+        <h1>Sairy Hub</h1>
 
-  <meta
-    name="description"
-    content="技術・趣味・学習の記録サイト"
-  >
-
-  <meta
-    name="robots"
-    content="index,follow"
-  >
-
-  <meta
-    property="og:title"
-    content="Sairy Hub"
-  >
-
-  <meta
-    property="og:description"
-    content="個人サイト"
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <link
-    rel="stylesheet"
-    href="/css/style.css"
-  >
-</head>
-
-<body>
-
-  <!-- 共通ヘッダー -->
-  <div data-include="/components/header.html"></div>
-
-  <main class="cartoon-home">
-
-    <section class="hero-card">
-
-      <h1>Sairy Hub</h1>
-
-      <p>
-        Welcome to my strange little corner.<br>
-        技術・趣味・学習ログ・思いつきなどを置いています。
-      </p>
+        <p>
+            Welcome to my strange little corner
+        </p>
 
     </section>
 
-    <section class="desktop-grid">
 
-      <a
-        href="/blog/te"
-        class="toon-card"
-      >
-        <div class="toon-icon">
-          🎞
+    <!-- 最新記事 -->
+
+    <section class="showcase">
+
+        <div class="section-label">
+
+            NOW SHOWING
+
         </div>
 
-        <h2>
-          Tech Reel
-        </h2>
+        <article class="featured-card">
 
-        <p>
-          技術・資格・学習ログ
-        </p>
-      </a>
+            <span class="new-stamp">
 
-      <a
-        href="/blog/hb"
-        class="toon-card"
-      >
-        <div class="toon-icon">
-          🎮
-        </div>
+                NEW
 
-        <h2>
-          Hobby Film
-        </h2>
+            </span>
 
-        <p>
-          ゲーム・趣味
-        </p>
-      </a>
+            <h2>
 
-      <a
-        href="/blog/mk"
-        class="toon-card"
-      >
-        <div class="toon-icon">
-          🛠
-        </div>
+                CSSの実装 #1
 
-        <h2>
-          Workshop
-        </h2>
+            </h2>
 
-        <p>
-          制作・サイト改善
-        </p>
-      </a>
+            <p>
 
-      <a
-        href="/blog/lf"
-        class="toon-card"
-      >
-        <div class="toon-icon">
-          📓
-        </div>
+                CSS実装の記録と試行錯誤
 
-        <h2>
-          Diary Notes
-        </h2>
+            </p>
 
-        <p>
-          日記・雑記
-        </p>
-      </a>
+            <a href="#">
 
-      <a
-        href="/blog/archives"
-        class="toon-card"
-      >
-        <div class="toon-icon">
-          📚
-        </div>
+                Read →
 
-        <h2>
-          Film Shelf
-        </h2>
+            </a>
 
-        <p>
-          記事一覧
-        </p>
-      </a>
-
-      <div class="toon-card latest-card">
-
-        <div class="toon-icon">
-          📽
-        </div>
-
-        <h2>
-          Now Showing
-        </h2>
-
-        <div id="latest-post">
-          <p>
-            読み込み中...
-          </p>
-        </div>
-
-      </div>
+        </article>
 
     </section>
 
-  </main>
 
-  <!-- 共通フッター -->
-  <div data-include="/components/footer.html"></div>
+    <!-- カテゴリ -->
 
-  <script
-    src="/js/include.js"
-    defer
-  ></script>
-  <script
-    src="/js/posts.js"
-    defer
-  ></script>
-  <script
-    src="/js/latest.js"
-    defer
-  ></script>
+    <section class="category-grid">
 
-</body>
+        <a class="category-card" href="/blog/te">
 
-</html>
+            <div class="icon">
+
+                📺
+
+            </div>
+
+            <h3>
+
+                Tech Reel
+
+            </h3>
+
+        </a>
+
+        <a class="category-card" href="/blog/hb">
+
+            <div class="icon">
+
+                🎮
+
+            </div>
+
+            <h3>
+
+                Hobby Film
+
+            </h3>
+
+        </a>
+
+        <a class="category-card" href="/blog/mk">
+
+            <div class="icon">
+
+                🔧
+
+            </div>
+
+            <h3>
+
+                Workshop
+
+            </h3>
+
+        </a>
+
+        <a class="category-card" href="/blog/lf">
+
+            <div class="icon">
+
+                📓
+
+            </div>
+
+            <h3>
+
+                Diary Notes
+
+            </h3>
+
+        </a>
+
+    </section>
+
+
+    <!-- ランダム記事 -->
+
+    <section class="random-box">
+
+        <div class="section-label">
+
+            RANDOM PICK
+
+        </div>
+
+        <article>
+
+            <h3>
+
+                Return of the Obra Dinn
+
+            </h3>
+
+            <p>
+
+                「船員全員の死因を探す」
+
+            </p>
+
+        </article>
+
+    </section>
+
+</main>
