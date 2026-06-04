@@ -1,7 +1,12 @@
 /* ========================================
    Base
-   1930年代カートゥーン風
 ======================================== */
+
+*{
+
+    box-sizing:border-box;
+
+}
 
 body{
 
@@ -9,18 +14,16 @@ body{
 
     padding:0;
 
-    background:#f7f2e4;
-
     color:#222;
+
+    line-height:1.7;
 
     font-family:
 
         "Trebuchet MS",
         sans-serif;
 
-    line-height:1.7;
-
-    /* 古い紙感 */
+    background:#f7f2e4;
 
     background-image:
 
@@ -34,12 +37,6 @@ body{
 
 }
 
-
-
-/* ========================================
-   Layout
-======================================== */
-
 main{
 
     width:90%;
@@ -50,26 +47,129 @@ main{
 
 }
 
+a{
+
+    color:black;
+
+}
+
 
 
 /* ========================================
-   Header
+   Common Components
 ======================================== */
 
-.site-header{
+/* 共通カード */
 
-    margin:
+.card{
 
-        2rem auto
-        4rem;
+    position:relative;
+
+    display:block;
+
+    padding:2rem;
+
+    background:white;
+
+    border:
+
+        5px solid black;
+
+    border-radius:
+
+        35px;
+
+    box-shadow:
+
+        8px 8px 0 black;
+
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+.card:hover{
+
+    transform:
+
+        scale(1.03)
+        rotate(-2deg);
+
+}
+
+
+/* 丸ラベル */
+
+.label{
+
+    display:inline-block;
 
     padding:
 
-        2rem;
+        .5rem
+        1rem;
 
-    background:
+    background:black;
 
-        #fffef8;
+    color:white;
+
+    border-radius:
+
+        999px;
+
+}
+
+
+/* タグ */
+
+.card-tags{
+
+    margin-top:1rem;
+
+}
+
+.card-tags span{
+
+    display:inline-block;
+
+    padding:
+
+        .2rem
+        .7rem;
+
+    margin-right:.5rem;
+
+    border:
+
+        3px solid black;
+
+    border-radius:
+
+        999px;
+
+    background:#f6f1e4;
+
+}
+
+
+
+/* ========================================
+   Header / Footer
+======================================== */
+
+.site-header,
+.footer-box{
+
+    position:relative;
+
+    margin:
+
+        2rem auto;
+
+    padding:2rem;
+
+    background:#fffef8;
 
     border:
 
@@ -83,26 +183,27 @@ main{
 
         10px 10px 0 black;
 
-    position:relative;
-
 }
 
 
-/* 左上の丸 */
-
-.site-header::before{
+.site-header::before,
+.site-header::after{
 
     content:"";
 
-    width:40px;
-
-    height:40px;
+    position:absolute;
 
     border-radius:50%;
 
     background:black;
 
-    position:absolute;
+}
+
+.site-header::before{
+
+    width:40px;
+
+    height:40px;
 
     top:-10px;
 
@@ -110,22 +211,11 @@ main{
 
 }
 
-
-/* 右下の丸 */
-
 .site-header::after{
-
-    content:"";
 
     width:30px;
 
     height:30px;
-
-    border-radius:50%;
-
-    background:black;
-
-    position:absolute;
 
     right:-8px;
 
@@ -133,11 +223,6 @@ main{
 
 }
 
-
-
-/* ========================================
-   Logo
-======================================== */
 
 .site-logo{
 
@@ -149,28 +234,18 @@ main{
 
     font-weight:bold;
 
-    color:black;
-
     letter-spacing:.12em;
 
 }
-
 
 .site-subtitle{
 
     text-align:center;
 
-    margin-top:.5rem;
-
     font-style:italic;
 
 }
 
-
-
-/* ========================================
-   Navigation
-======================================== */
 
 .main-nav{
 
@@ -186,327 +261,39 @@ main{
 
 }
 
-
 .main-nav a{
-
-    background:white;
-
-    border:
-
-        4px solid black;
-
-    border-radius:
-
-        999px;
 
     padding:
 
         .7rem
         1.3rem;
 
-    color:black;
+    border:
 
-    font-weight:bold;
+        4px solid black;
 
-    transition:.2s;
+    border-radius:
+
+        999px;
+
+    background:white;
 
 }
-
 
 .main-nav a:hover{
 
     transform:
 
-        scale(1.05)
         rotate(-4deg);
 
 }
 
 
-
-/* ========================================
-   Article Card
-======================================== */
-
-.article-card{
-
-    position:relative;
-
-    margin-bottom:3rem;
-
-    padding:
-
-        2rem;
-
-    background:
-
-        white;
-
-    border:
-
-        5px solid black;
-
-    border-radius:
-
-        35px;
-
-    box-shadow:
-
-        8px 8px 0 black;
-
-    transition:.2s;
-
-}
-
-
-/* カートゥーンの吹き出し */
-
-.article-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:30px;
-
-    height:30px;
-
-    bottom:-20px;
-
-    left:40px;
-
-    background:white;
-
-    border-left:
-
-        5px solid black;
-
-    border-bottom:
-
-        5px solid black;
-
-    transform:
-
-        rotate(-45deg);
-
-}
-
-
-/* 展示番号風 */
-
-.article-card::after{
-
-    content:"LOG";
-
-    position:absolute;
-
-    top:-15px;
-
-    right:25px;
-
-    background:black;
-
-    color:white;
-
-    padding:
-
-        .4rem .8rem;
-
-    border-radius:
-
-        999px;
-
-}
-
-
-.article-card:nth-child(odd){
-
-    transform:
-
-        rotate(-1deg);
-
-}
-
-.article-card:nth-child(even){
-
-    transform:
-
-        rotate(1deg);
-
-}
-
-
-.article-card:hover{
-
-    transform:
-
-        scale(1.03)
-        rotate(-2deg);
-
-}
-
-
-
-/* ========================================
-   Tag
-======================================== */
-
-.card-tags{
-
-    margin-top:1rem;
-
-}
-
-
-.card-tags span{
-
-    display:inline-block;
-
-    background:#f6f1e4;
-
-    border:
-
-        3px solid black;
-
-    border-radius:
-
-        999px;
-
-    padding:
-
-        .2rem .7rem;
-
-    margin-right:
-
-        .5rem;
-
-}
-
-
-
-/* ========================================
-   Post
-======================================== */
-
-.post{
-
-    position:relative;
-
-    background:white;
-
-    border:
-
-        5px solid black;
-
-    border-radius:
-
-        40px;
-
-    padding:
-
-        3rem;
-
-    box-shadow:
-
-        10px 10px 0 black;
-
-}
-
-
-/* スタンプ */
-
-.post-stamp{
-
-    display:inline-block;
-
-    border:
-
-        4px dashed black;
-
-    padding:
-
-        .5rem 1rem;
-
-    margin-bottom:1rem;
-
-    transform:
-
-        rotate(-6deg);
-
-    font-weight:bold;
-
-}
-
-
-
-/* 見出し */
-
-.post-contents h2{
-
-    display:inline-block;
-
-    padding:
-
-        .2rem .8rem;
-
-    border-bottom:
-
-        4px solid black;
-
-}
-
-
-.post-contents img{
-
-    width:100%;
-
-    border:
-
-        4px solid black;
-
-    border-radius:
-
-        20px;
-
-}
-
-
-
-/* ========================================
-   Footer
-======================================== */
-
 .footer-box{
-
-    position:relative;
-
-    margin:
-
-        5rem auto
-        2rem;
-
-    padding:
-
-        2rem;
-
-    border:
-
-        5px solid black;
-
-    border-radius:
-
-        35px;
-
-    background:white;
 
     text-align:center;
 
-    box-shadow:
-
-        8px 8px 0 black;
-
 }
-
 
 .footer-box::before{
 
@@ -518,183 +305,37 @@ main{
 
     left:50%;
 
-    transform:
-
-        translateX(-50%);
-
-    background:black;
-
-    color:white;
-
-    padding:
-
-        .4rem 1rem;
-
-    border-radius:
-
-        999px;
-
-}
-
-/* ======================
-   Hero
-====================== */
-
-.hero-box{
-
-    text-align:center;
-
-    margin-bottom:4rem;
-
-}
-
-
-/* ======================
-   Section Label
-====================== */
-
-.section-label{
-
-    display:inline-block;
-
-    padding:
-
-        .5rem
-        1rem;
-
-    border:
-
-        3px solid black;
-
-    border-radius:
-
-        999px;
-
-    background:black;
-
-    color:white;
-
-    margin-bottom:1rem;
-
-}
-
-
-/* ======================
-   Featured
-====================== */
-
-.featured-card{
-
-    padding:2rem;
-
-    border:
-
-        5px solid black;
-
-    border-radius:
-
-        35px;
-
-    background:white;
-
-    margin-bottom:4rem;
-
-    position:relative;
-
-}
-
-
-.new-stamp{
-
-    position:absolute;
-
-    top:-15px;
-
-    right:20px;
-
-    background:black;
-
-    color:white;
+    transform:translateX(-50%);
 
     padding:
 
         .4rem
-        .8rem;
-
-}
-
-
-/* ======================
-   Category
-====================== */
-
-.category-grid{
-
-    display:grid;
-
-    grid-template-columns:
-
-        repeat(
-            2,
-            1fr
-        );
-
-    gap:2rem;
-
-    margin-bottom:4rem;
-
-}
-
-
-.category-card{
-
-    text-align:center;
-
-    padding:2rem;
-
-    background:white;
-
-    border:
-
-        4px solid black;
+        1rem;
 
     border-radius:
 
-        35px;
+        999px;
+
+    background:black;
+
+    color:white;
 
 }
 
 
-.category-card:hover{
 
-    transform:
+/* ========================================
+   Top Page
+======================================== */
 
-        rotate(-3deg)
-        scale(1.05);
+.storage-intro{
 
-}
-
-
-.icon{
-
-    font-size:2rem;
-
-}
-
-
-/* ======================
-   Random
-====================== */
-
-.random-box{
+    text-align:center;
 
     margin-bottom:4rem;
 
 }
 
-/* =====================
-   Storage Layout
-===================== */
 
 .storage-map{
 
@@ -714,50 +355,12 @@ main{
 }
 
 
-/* 箱 */
-
 .storage-box{
-
-    display:block;
 
     text-align:center;
 
-    padding:2rem;
-
-    background:white;
-
-    border:
-
-        5px solid black;
-
-    border-radius:
-
-        35px;
-
-    color:black;
-
-    text-decoration:none;
-
-    box-shadow:
-
-        8px 8px 0 black;
-
-    transition:.2s;
-
 }
 
-
-.storage-box:hover{
-
-    transform:
-
-        rotate(-4deg)
-        scale(1.05);
-
-}
-
-
-/* 微妙に傾ける */
 
 .tech{
 
@@ -790,8 +393,6 @@ main{
 }
 
 
-/* 最新記事 */
-
 .today-found{
 
     margin-top:5rem;
@@ -799,23 +400,145 @@ main{
 }
 
 
-.found-label{
 
-    display:inline-block;
+/* ========================================
+   Article / Post
+======================================== */
+
+.article-card{
+
+    margin-bottom:3rem;
+
+}
+
+
+.article-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:30px;
+
+    height:30px;
+
+    bottom:-20px;
+
+    left:40px;
+
+    background:white;
+
+    border-left:
+
+        5px solid black;
+
+    border-bottom:
+
+        5px solid black;
+
+    transform:
+
+        rotate(-45deg);
+
+}
+
+
+.article-card::after{
+
+    content:"LOG";
+
+    position:absolute;
+
+    top:-15px;
+
+    right:25px;
+
+    padding:
+
+        .4rem
+        .8rem;
 
     background:black;
 
     color:white;
+
+    border-radius:
+
+        999px;
+
+}
+
+
+.post{
+
+    padding:3rem;
+
+}
+
+
+.post-stamp{
+
+    display:inline-block;
 
     padding:
 
         .5rem
         1rem;
 
+    border:
+
+        4px dashed black;
+
+    font-weight:bold;
+
+    transform:
+
+        rotate(-6deg);
+
+}
+
+
+.post-contents h2{
+
+    display:inline-block;
+
+    padding:
+
+        .2rem
+        .8rem;
+
+    border-bottom:
+
+        4px solid black;
+
+}
+
+.post-contents img{
+
+    width:100%;
+
+    border:
+
+        4px solid black;
+
     border-radius:
 
-        999px;
+        20px;
 
-    margin-bottom:1rem;
+}
+
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media(max-width:768px){
+
+    .storage-map{
+
+        grid-template-columns:1fr;
+
+    }
 
 }
