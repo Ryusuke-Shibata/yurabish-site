@@ -130,15 +130,6 @@ a{
    Hero
 ======================================== */
 
-.hero{
-
-    text-align:center;
-
-    margin-bottom:4rem;
-
-}
-
-
 .hero h1{
 
     font-size:4rem;
@@ -280,18 +271,6 @@ a{
    Quest
 ======================================== */
 
-.quest-box{
-
-    margin-top:4rem;
-
-    border:
-
-        3px dashed #666;
-
-    padding:2rem;
-
-}
-
 
 .quest-title{
 
@@ -378,6 +357,222 @@ a{
     .menu-grid{
 
         grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ========================================
+   Header
+======================================== */
+
+.site-header{
+
+    padding:2rem;
+
+    margin-bottom:4rem;
+
+    border-bottom:
+
+        2px solid #444;
+
+}
+
+
+.site-logo{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    letter-spacing:.15em;
+
+}
+
+
+.site-subtitle{
+
+    text-align:center;
+
+    opacity:.6;
+
+    font-style:italic;
+
+}
+
+
+.main-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    margin-top:2rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/* ========================================
+   Category Menu
+======================================== */
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:2rem;
+
+}
+
+
+.menu-card{
+
+    position:relative;
+
+    padding:2rem;
+
+    border:
+
+        2px solid #555;
+
+    background:
+
+        #272632;
+
+    transition:.2s;
+
+}
+
+
+.menu-card:hover{
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:white;
+
+}
+
+
+.stamp{
+
+    display:inline-block;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+}
+
+
+.memo{
+
+    margin-top:1rem;
+
+    opacity:.6;
+
+}
+
+
+
+/* ========================================
+   Recent Log
+======================================== */
+
+.recent-log{
+
+    margin-top:5rem;
+
+}
+
+
+.recent-log h2{
+
+    margin-bottom:2rem;
+
+}
+
+
+/* 会話ログ風 */
+
+#latest-post article{
+
+    position:relative;
+
+    margin-bottom:1.5rem;
+
+    padding:
+
+        1rem
+        1.5rem;
+
+    background:
+
+        #272632;
+
+    border-left:
+
+        4px solid #66bfff;
+
+}
+
+
+#latest-post article::before{
+
+    content:"▶";
+
+    position:absolute;
+
+    left:-18px;
+
+    top:16px;
+
+}
+
+
+#latest-post h3{
+
+    margin:0;
+
+}
+
+
+#latest-post small{
+
+    opacity:.5;
+
+}
+
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media(max-width:768px){
+
+    .menu-grid{
+
+        grid-template-columns:
+
+            1fr;
 
     }
 
