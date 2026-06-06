@@ -1,7 +1,7 @@
 ---
 title: ブログ更新省力化のおさらい
 date: 2026-02-27
-category: 制作
+category: Workbench
 tags:
   - ブログ運用
   - 制作日誌
