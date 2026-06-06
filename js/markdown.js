@@ -1,18 +1,17 @@
-/* ========================================
+/* ==========================
    記事ページ描画
-   URLパラメータからMarkdownを取得して表示
-======================================== */
+========================== */
 
 document.addEventListener(
 
     "DOMContentLoaded",
 
-    async()=>{
+    async ()=>{
 
 
-        /* ======================
-           URLから記事情報取得
-        ====================== */
+        /* ==========================
+           URLパラメータ取得
+        ========================== */
 
         const params=
 
@@ -32,37 +31,46 @@ document.addEventListener(
             );
 
 
-        /* 記事指定がない場合 */
+        const content=
+
+            document.getElementById(
+
+                "content"
+
+            );
+
 
         if(!post){
 
-            showError(
+            content.innerHTML=`
 
-                "記事が見つかりません。"
+                <p>
 
-            );
+                    記事が見つかりません。
+
+                </p>
+
+            `;
 
             return;
 
         }
 
 
-        /* ======================
-           Markdown取得
-        ====================== */
-
         try{
+
+
+            /* ==========================
+               Markdown取得
+            ========================== */
 
             const response=
 
                 await fetch(
 
                     `/posts/${post}.md`,
-
                     {
-
                         cache:"no-cache"
-
                     }
 
                 );
@@ -79,82 +87,151 @@ document.addEventListener(
             }
 
 
-            let markdown=
+            const markdown=
 
                 await response.text();
 
 
-            /* ======================
-               Frontmatter除去
-            ====================== */
 
-            markdown=
+            /* ==========================
+               FrontMatter取得
+            ========================== */
+
+            const frontmatter=
+
+                markdown.match(
+
+                    /---([\s\S]*?)---/
+
+                );
+
+
+            let title="Untitled";
+
+            let date="";
+
+            let category="";
+
+
+            if(frontmatter){
+
+                const meta=
+
+                    frontmatter[1];
+
+
+                title=
+
+                    meta.match(
+
+                        /title:\s*(.+)/
+
+                    )?.[1]
+
+                    ||
+
+                    "Untitled";
+
+
+                date=
+
+                    meta.match(
+
+                        /date:\s*(.+)/
+
+                    )?.[1]
+
+                    ||
+
+                    "";
+
+
+                category=
+
+                    meta.match(
+
+                        /category:\s*(.+)/
+
+                    )?.[1]
+
+                    ||
+
+                    "";
+
+            }
+
+
+
+            /* ==========================
+               FrontMatter除去
+            ========================== */
+
+            const body=
 
                 markdown.replace(
 
-                    /^---[\s\S]*?---/,
+                    /---[\s\S]*?---/,
 
                     ""
 
                 );
 
 
-            /* ======================
-               タイトル取得
-            ====================== */
 
-            const title=
+            /* ==========================
+               HTMLへ反映
+            ========================== */
 
-                extractTitle(
+            document.title=
 
-                    markdown
+                `${title} | Sairy Hub`;
 
-                );
-
-
-            /* タイトル表示 */
-
-            if(title){
-
-                document.title=
-
-                    `${title} | SAIRY HUB`;
-
-
-                document.getElementById(
-
-                    "post-title"
-
-                ).textContent=
-
-                    title;
-
-            }
-
-
-            /* ======================
-               Markdown→HTML変換
-            ====================== */
 
             document.getElementById(
 
-                "content"
+                "page-title"
 
-            ).innerHTML=
+            ).textContent=
+
+                title;
+
+
+            document.getElementById(
+
+                "post-title"
+
+            ).textContent=
+
+                title;
+
+
+            document.getElementById(
+
+                "post-date"
+
+            ).textContent=
+
+                date;
+
+
+            document.getElementById(
+
+                "post-category"
+
+            ).textContent=
+
+                category;
+
+
+            content.innerHTML=
 
                 marked.parse(
 
-                    markdown
+                    body
 
                 );
 
-
         }
-
-
-        /* ======================
-           エラー時
-        ====================== */
 
         catch(error){
 
@@ -164,81 +241,18 @@ document.addEventListener(
 
             );
 
-            showError(
+            content.innerHTML=`
 
-                "記事を読み込めませんでした。"
+                <p>
 
-            );
+                    記事を読み込めませんでした。
+
+                </p>
+
+            `;
 
         }
 
     }
 
 );
-
-
-/* ========================================
-   H1からタイトル取得
-======================================== */
-
-function extractTitle(
-
-    markdown
-
-){
-
-    const match=
-
-        markdown.match(
-
-            /^#\s+(.+)$/m
-
-        );
-
-
-    return match
-
-        ? match[1]
-
-        : "Untitled";
-
-}
-
-
-/* ========================================
-   エラー表示
-======================================== */
-
-function showError(
-
-    message
-
-){
-
-    document.getElementById(
-
-        "content"
-
-    ).innerHTML=
-
-        `
-
-        <div class="error-box">
-
-            <h2>
-
-                ERROR
-
-            </h2>
-
-            <p>
-
-                ${message}
-
-            </p>
-
-        </div>
-
-        `;
-
-}
