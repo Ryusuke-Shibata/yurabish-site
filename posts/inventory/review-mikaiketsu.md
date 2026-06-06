@@ -1,7 +1,7 @@
 ---
 title: 未解決事件は終わらせないといけないから
 date: 2025-12-27
-category: ホビー
+category: Inventory
 tags:
   - ADV
   - 推理
