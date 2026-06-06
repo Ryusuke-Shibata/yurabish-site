@@ -1,208 +1,208 @@
 [
-  {
-    "title": "CSSの実装 #1",
-    "slug": "css-base-01",
-    "category": "mk",
-    "date": "2026-04-10",
-    "summary": "SairyHubへのCSS実装パート1です。",
-    "tags": ["css", "web"]
-  },
+    {
+        "title": "CSSの実装 #1",
+        "slug": "css-base-01",
+        "category": "workbench",
+        "date": "2026-04-10",
+        "summary": "SairyHubへのCSS実装パート1です。",
+        "tags": ["css", "web"]
+    },
 
-  {
-    "title": "3月は相も変わらず忙しく",
-    "slug": "diary-260330",
-    "category": "lf",
-    "date": "2026-03-30",
-    "summary": "バタバタとした3月の振り返りです。",
-    "tags": ["diary"]
-  },
+    {
+        "title": "3月は相も変わらず忙しく",
+        "slug": "diary-260330",
+        "category": "journal",
+        "date": "2026-03-30",
+        "summary": "バタバタとした3月の振り返りです。",
+        "tags": ["diary", "life"]
+    },
 
-  {
-    "title": "2月？　3月も終わるというのに",
-    "slug": "diary-260324",
-    "category": "lf",
-    "date": "2026-03-24",
-    "summary": "通り過ぎた2月の振り返りです。",
-    "tags": ["diary"]
-  },
+    {
+        "title": "2月？　3月も終わるというのに",
+        "slug": "diary-260324",
+        "category": "journal",
+        "date": "2026-03-24",
+        "summary": "通り過ぎた2月の振り返りです。",
+        "tags": ["diary", "life"]
+    },
 
-  {
-    "title": "CSSの基礎",
-    "slug": "css-basic-01",
-    "category": "te",
-    "date": "2026-03-16",
-    "summary": "CSSの基礎学習パート1です。",
-    "tags": ["css"]
-  },
+    {
+        "title": "CSSの基礎",
+        "slug": "css-basic-01",
+        "category": "knowledge",
+        "date": "2026-03-16",
+        "summary": "CSSの基礎学習パート1です。",
+        "tags": ["css", "study"]
+    },
 
-  {
-    "title": "Return of the Obra dinn",
-    "slug": "review-obradinn",
-    "category": "hb",
-    "date": "2026-03-09",
-    "summary": "『Return of the Obra dinn』をプレイした感想です。",
-    "tags": ["game", "review"]
-  },
+    {
+        "title": "Return of the Obra dinn",
+        "slug": "review-obradinn",
+        "category": "inventory",
+        "date": "2026-03-09",
+        "summary": "『Return of the Obra dinn』をプレイした感想です。",
+        "tags": ["game", "review", "mystery"]
+    },
 
-  {
-    "title": "MS-900学習ログ #5",
-    "slug": "ms900-05",
-    "category": "te",
-    "date": "2026-02-27",
-    "summary": "MS-900の学習まとめ、課金・サポート編です。",
-    "tags": ["microsoft", "ms900"]
-  },
+    {
+        "title": "MS-900学習ログ #5",
+        "slug": "ms900-05",
+        "category": "knowledge",
+        "date": "2026-02-27",
+        "summary": "MS-900の学習まとめ、課金・サポート編です。",
+        "tags": ["microsoft", "ms900", "cloud"]
+    },
 
-  {
-    "title": "HTMLの共通化",
-    "slug": "html-01",
-    "category": "te",
-    "date": "2026-02-19",
-    "summary": "HTMLの基本構造の総まとめです。",
-    "tags": ["html", "web"]
-  },
+    {
+        "title": "HTMLの共通化",
+        "slug": "html-01",
+        "category": "knowledge",
+        "date": "2026-02-19",
+        "summary": "HTMLの基本構造の総まとめです。",
+        "tags": ["html", "web"]
+    },
 
-  {
-    "title": "MS-900学習ログ #4",
-    "slug": "ms900-04",
-    "category": "te",
-    "date": "2026-02-11",
-    "summary": "MS-900の学習まとめ、セキュリティ機能後編です。",
-    "tags": ["microsoft", "ms900"]
-  },
+    {
+        "title": "MS-900学習ログ #4",
+        "slug": "ms900-04",
+        "category": "knowledge",
+        "date": "2026-02-11",
+        "summary": "MS-900の学習まとめ、セキュリティ機能後編です。",
+        "tags": ["microsoft", "ms900", "security"]
+    },
 
-  {
-    "title": "1年は冬から始まる",
-    "slug": "diary-260204",
-    "category": "lf",
-    "date": "2026-02-04",
-    "summary": "寒い寒い1月の振り返りです。",
-    "tags": ["diary"]
-  },
+    {
+        "title": "1年は冬から始まる",
+        "slug": "diary-260204",
+        "category": "journal",
+        "date": "2026-02-04",
+        "summary": "寒い寒い1月の振り返りです。",
+        "tags": ["diary", "life"]
+    },
 
-  {
-    "title": "表示用HTMLの共通化",
-    "slug": "blog-markdown-02",
-    "category": "mk",
-    "date": "2026-01-31",
-    "summary": "更新省力化のためのHTMLの集約作業です。",
-    "tags": ["markdown", "html"]
-  },
+    {
+        "title": "表示用HTMLの共通化",
+        "slug": "blog-markdown-02",
+        "category": "workbench",
+        "date": "2026-01-31",
+        "summary": "更新省力化のためのHTMLの集約作業です。",
+        "tags": ["markdown", "html"]
+    },
 
-  {
-    "title": "Markdown活用",
-    "slug": "blog-markdown-01",
-    "category": "mk",
-    "date": "2026-01-31",
-    "summary": "更新省力化のためのMarkdown実装作業です。",
-    "tags": ["markdown"]
-  },
+    {
+        "title": "Markdown活用",
+        "slug": "blog-markdown-01",
+        "category": "workbench",
+        "date": "2026-01-31",
+        "summary": "更新省力化のためのMarkdown実装作業です。",
+        "tags": ["markdown", "automation"]
+    },
 
-  {
-    "title": "画像を含んだ投稿",
-    "slug": "blog-image-01",
-    "category": "mk",
-    "date": "2026-01-25",
-    "summary": "画像投稿の実装です。",
-    "tags": ["image", "web"]
-  },
+    {
+        "title": "画像を含んだ投稿",
+        "slug": "blog-image-01",
+        "category": "workbench",
+        "date": "2026-01-25",
+        "summary": "画像投稿の実装です。",
+        "tags": ["image", "web"]
+    },
 
-  {
-    "title": "MS-900学習ログ #3",
-    "slug": "ms900-03",
-    "category": "te",
-    "date": "2026-01-18",
-    "summary": "MS-900の学習まとめ、セキュリティ機能前編です。",
-    "tags": ["microsoft", "ms900"]
-  },
+    {
+        "title": "MS-900学習ログ #3",
+        "slug": "ms900-03",
+        "category": "knowledge",
+        "date": "2026-01-18",
+        "summary": "MS-900の学習まとめ、セキュリティ機能前編です。",
+        "tags": ["microsoft", "ms900", "security"]
+    },
 
-  {
-    "title": "MS-900学習ログ #2",
-    "slug": "ms900-02",
-    "category": "te",
-    "date": "2026-01-11",
-    "summary": "MS-900の学習まとめ、ユーザー向けサービス編です。",
-    "tags": ["microsoft", "ms900"]
-  },
+    {
+        "title": "MS-900学習ログ #2",
+        "slug": "ms900-02",
+        "category": "knowledge",
+        "date": "2026-01-11",
+        "summary": "MS-900の学習まとめ、ユーザー向けサービス編です。",
+        "tags": ["microsoft", "ms900", "cloud"]
+    },
 
-  {
-    "title": "ようこそ2026年へ",
-    "slug": "diary-260104",
-    "category": "lf",
-    "date": "2026-01-04",
-    "summary": "あけましておめでとうございます。",
-    "tags": ["diary"]
-  },
+    {
+        "title": "ようこそ2026年へ",
+        "slug": "diary-260104",
+        "category": "journal",
+        "date": "2026-01-04",
+        "summary": "あけましておめでとうございます。",
+        "tags": ["diary", "life"]
+    },
 
-  {
-    "title": "未解決事件は終わらせないといけないから",
-    "slug": "review-mikaiketsu",
-    "category": "hb",
-    "date": "2025-12-27",
-    "summary": "『未解決事件は終わらせないといけないから』をプレイした感想です。",
-    "tags": ["game", "review"]
-  },
+    {
+        "title": "未解決事件は終わらせないといけないから",
+        "slug": "review-mikaiketsu",
+        "category": "inventory",
+        "date": "2025-12-27",
+        "summary": "『未解決事件は終わらせないといけないから』をプレイした感想です。",
+        "tags": ["game", "review", "story"]
+    },
 
-  {
-    "title": "Sairy Hub 更新ロードマップ",
-    "slug": "blog-roadmap-01",
-    "category": "mk",
-    "date": "2025-12-20",
-    "summary": "Sairy Hubをどのように更新していくかのロードマップです。",
-    "tags": ["roadmap", "web"]
-  },
+    {
+        "title": "Sairy Hub 更新ロードマップ",
+        "slug": "blog-roadmap-01",
+        "category": "workbench",
+        "date": "2025-12-20",
+        "summary": "Sairy Hubをどのように更新していくかのロードマップです。",
+        "tags": ["roadmap", "web"]
+    },
 
-  {
-    "title": "もう終わる12月",
-    "slug": "diary-251215",
-    "category": "lf",
-    "date": "2025-12-15",
-    "summary": "1年の振り返りと来年の目標についてです。",
-    "tags": ["diary"]
-  },
+    {
+        "title": "もう終わる12月",
+        "slug": "diary-251215",
+        "category": "journal",
+        "date": "2025-12-15",
+        "summary": "1年の振り返りと来年の目標についてです。",
+        "tags": ["diary", "life"]
+    },
 
-  {
-    "title": "共通部分のコンポーネント化",
-    "slug": "blog-components",
-    "category": "mk",
-    "date": "2025-12-09",
-    "summary": "JavaScriptによるコンポーネントのインクルードについてです。",
-    "tags": ["javascript", "component"]
-  },
+    {
+        "title": "共通部分のコンポーネント化",
+        "slug": "blog-components",
+        "category": "workbench",
+        "date": "2025-12-09",
+        "summary": "JavaScriptによるコンポーネントのインクルードについてです。",
+        "tags": ["javascript", "component"]
+    },
 
-  {
-    "title": "Staffer Case:超能力推理アドベンチャー",
-    "slug": "review-staffercase",
-    "category": "hb",
-    "date": "2025-12-01",
-    "summary": "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。",
-    "tags": ["game", "review"]
-  },
+    {
+        "title": "Staffer Case:超能力推理アドベンチャー",
+        "slug": "review-staffercase",
+        "category": "inventory",
+        "date": "2025-12-01",
+        "summary": "『Staffer Case:超能力推理アドベンチャー』をプレイした感想です。",
+        "tags": ["game", "review", "adventure"]
+    },
 
-  {
-    "title": "MS-900学習ログ #1",
-    "slug": "ms900-01",
-    "category": "te",
-    "date": "2025-11-21",
-    "summary": "MS-900の学習まとめ、基礎編です。",
-    "tags": ["microsoft", "ms900"]
-  },
+    {
+        "title": "MS-900学習ログ #1",
+        "slug": "ms900-01",
+        "category": "knowledge",
+        "date": "2025-11-21",
+        "summary": "MS-900の学習まとめ、基礎編です。",
+        "tags": ["microsoft", "ms900", "cloud"]
+    },
 
-  {
-    "title": "個人サイト開設までの道のり",
-    "slug": "blog-create",
-    "category": "mk",
-    "date": "2025-11-12",
-    "summary": "個人サイト開設の備忘です。",
-    "tags": ["web", "site"]
-  },
+    {
+        "title": "個人サイト開設までの道のり",
+        "slug": "blog-create",
+        "category": "workbench",
+        "date": "2025-11-12",
+        "summary": "個人サイト開設の備忘です。",
+        "tags": ["web", "site"]
+    },
 
-  {
-    "title": "自己紹介（詳しめ）",
-    "slug": "about-me",
-    "category": "lf",
-    "date": "2025-11-03",
-    "summary": "プロフィールページよりも少し細かい自己紹介です。",
-    "tags": ["profile"]
-  }
+    {
+        "title": "自己紹介（詳しめ）",
+        "slug": "about-me",
+        "category": "journal",
+        "date": "2025-11-03",
+        "summary": "プロフィールページよりも少し細かい自己紹介です。",
+        "tags": ["profile", "about"]
+    }
 ]
