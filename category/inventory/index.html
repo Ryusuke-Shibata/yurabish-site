@@ -3,106 +3,75 @@
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
 
-  <title>
-    Sairy Hub - Hobby
-  </title>
+    <title>
 
-  <link
-    rel="stylesheet"
-    href="/css/style.css"
-  >
+        Inventory | SAIRY HUB
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
 
 </head>
 
 <body>
 
-  <!-- 共通ヘッダー -->
-  <div
-    data-include="/components/header.html"
-  ></div>
+    <div data-include="/components/header.html"></div>
 
-  <main
-    class="category-page"
-    data-category="hb"
-    data-title="Hobby"
-    data-description="ゲームとか好きなもの置き場"
-  >
 
-    <section class="category-hero">
+    <main>
 
-      <div class="hero-card">
+        <!-- カテゴリ説明 -->
 
-        <span class="hero-icon">
-          🎮
-        </span>
+        <section>
 
-        <h1 id="category-title">
-        </h1>
+            <h1>
 
-        <p id="category-description">
-        </p>
+                🎮 Inventory
 
-      </div>
+            </h1>
 
-    </section>
+            <p>
 
-    <section
-      class="article-list"
-    >
+                ゲーム・趣味
 
-      <div
-        id="posts"
-      >
-        <p>
-          Loading...
-        </p>
-      </div>
+            </p>
 
-    </section>
+        </section>
 
-  </main>
 
-  <!-- 共通フッター -->
-  <div
-    data-include="/components/footer.html"
-  ></div>
+        <!-- 記事一覧 -->
 
-  <!-- JS -->
-  <script
-    src="/js/include.js"
-    defer
-  ></script>
+        <section>
 
-  <script
-    src="/js/category.js"
-    defer
-  ></script>
+            <div id="posts"></div>
 
-  <script
-    src="/js/category-page.js"
-    defer
-  ></script>
+        </section>
 
-  <noscript>
+    </main>
 
-    <div
-      style="
-        background:#ffcccc;
-        padding:1em;
-        text-align:center;
-      "
-    >
-      JavaScriptが無効です
-    </div>
 
-  </noscript>
+    <div data-include="/components/footer.html"></div>
+
+
+    <script src="/js/include.js"></script>
+
+    <script src="/js/category.js"></script>
+
+    <script>
+
+        renderCategory("inventory");
+
+    </script>
 
 </body>
 
