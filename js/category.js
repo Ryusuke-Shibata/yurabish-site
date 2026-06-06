@@ -55,7 +55,7 @@ async function renderCategory(category){
 
             <h3>
 
-                <a href="/post/?post=${p.category}/${p.slug}">
+                <a href="/posts/?post=${p.category}/${p.slug}">
 
                     ${p.title}
 
