@@ -1,7 +1,7 @@
 ---
 title: CSSの実装
 date: 2026-03-16
-category: 制作
+category: Workbench
 tags:
   - Web
   - ブログ運用
