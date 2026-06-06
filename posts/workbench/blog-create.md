@@ -1,7 +1,7 @@
 ---
 title: 個人サイト開設までの道のり
 date: 2025-11-12
-category: 制作
+category: Workbench
 tags:
   - ブログ運用
   - ドメイン
