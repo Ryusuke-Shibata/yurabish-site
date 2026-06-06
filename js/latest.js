@@ -1,48 +1,77 @@
-// ======================
-// 最新記事表示
-// ======================
-document.addEventListener(
-  "DOMContentLoaded",
+/* ==========================
+   最新記事表示
+========================== */
 
-  async () => {
+async function renderLatest(){
 
-    const target =
-      document.getElementById(
-        "latest-post"
-      );
+    const response = await fetch(
 
-    if (!target) {
-      return;
-    }
+        "/data/posts.json"
 
-    const posts =
-      await getPosts();
+    );
 
-    if (posts.length === 0) {
+    const posts = await response.json();
 
-      target.innerHTML =
-        "<p>記事がありません</p>";
 
-      return;
-    }
+    const latest=
 
-    const latest =
-      posts[0];
+        posts.sort(
 
-    const url =
-      `/blog/post?post=/posts/${latest.category}/${latest.slug}.md`;
+            (a,b)=>
 
-    target.innerHTML = `
-      <a href="${url}">
-        <strong>
-          ${latest.title}
-        </strong>
-        <br>
-        <small>
-          ${latest.date}
-        </small>
-      </a>
-    `;
+            new Date(b.date)
 
-  }
-);
+            -
+
+            new Date(a.date)
+
+        )
+
+        .slice(0,5);
+
+
+    const container=
+
+        document.getElementById(
+
+            "latest-post"
+
+        );
+
+
+    container.innerHTML=
+
+        latest.map(
+
+            p=>`
+
+            <article>
+
+                <small>
+
+                    ${p.date}
+
+                </small>
+
+                <h3>
+
+                    <a href="/post/?post=${p.category}/${p.slug}">
+
+                        ${p.title}
+
+                    </a>
+
+                </h3>
+
+            </article>
+
+            `
+
+        )
+
+        .join("");
+
+}
+
+
+renderLatest();
