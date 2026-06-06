@@ -1,7 +1,7 @@
 ---
 title: CSSの基礎学習 #01
 date: 2026-03-16
-category: 技術
+category: Knowledge
 tags:
   - 技術学習
 ---
