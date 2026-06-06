@@ -1,7 +1,7 @@
 ---
 title: 表示用HTMLの共通化
 date: 2026-01-31
-category: 制作
+category: Workbench
 tags:
   - ブログ運用
   - Markdown
