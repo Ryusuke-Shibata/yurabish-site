@@ -1,7 +1,7 @@
 ---
 title: 画像を含んだ投稿
 date: 2026-01-25
-category: 制作
+category: Workbench
 tags:
   - ブログ運用
   - 画像
