@@ -1,7 +1,7 @@
 ---
 title: 
 date: 
-category: ホビー
+category: Inventory
 tags:
   - レビュー
 ---
