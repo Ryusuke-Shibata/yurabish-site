@@ -1,7 +1,7 @@
 ---
 title: Staffer Case:超能力推理アドベンチャー
 date: 2025-12-01
-category: ホビー
+category: Inventory
 tags:
   - ADV
   - 推理
