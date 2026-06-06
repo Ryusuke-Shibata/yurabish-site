@@ -1,7 +1,7 @@
 ---
 title: Return of the Obra Dinn
 date: 2026-03-09
-category: ホビー
+category: Inventory/
 tags:
   - 推理
   - レビュー
