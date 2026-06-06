@@ -1,7 +1,7 @@
 ---
 title: HTMLの基本構造の理解
 date: 2026-02-19
-category: 技術
+category: Knowledge
 tags:
   - HTML
   - Webサイト
