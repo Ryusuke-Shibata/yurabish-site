@@ -54,7 +54,10 @@ async function loadPost(path){
             "content"
         ).innerHTML=
             marked.parse(
-                parsed.content
+                parsed.content,
+               {
+                  breaks:true
+               }
             );
     }
     catch(error){
