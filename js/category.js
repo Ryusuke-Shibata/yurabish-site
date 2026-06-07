@@ -15,23 +15,31 @@ async function renderCategory(category){
             await response.json();
 
         const filtered=
+
             posts.filter(
 
-                article=>{
+                article=>
 
-                    const currentCategory=
+                    article.path
+                    .startsWith(
+                        `${category}/`
+                    )
 
+            );
+
+        const articles=
+
+            await Promise.all(
+
+                filtered.map(
+
+                    article=>
+
+                    loadArticleMeta(
                         article.path
-                        .split("/")[0];
+                    )
 
-                    return(
-
-                        currentCategory===
-                        category
-
-                    );
-
-                }
+                )
 
             );
 
@@ -43,23 +51,33 @@ async function renderCategory(category){
 
         container.innerHTML=
 
-            filtered.map(
+            articles.map(
 
                 article=>`
 
                 <article class="article-card">
 
+                    <small>
+
+                        ${article.date||""}
+
+                    </small>
+
                     <h3>
 
                         <a href="/posts/?post=${article.path}">
 
-                            ${formatTitle(
-                                article.path
-                            )}
+                            ${article.title}
 
                         </a>
 
                     </h3>
+
+                    <p>
+
+                        ${article.summary||""}
+
+                    </p>
 
                 </article>
 
@@ -81,19 +99,104 @@ async function renderCategory(category){
 
 
 /* ==========================
-   タイトル整形
+   Front Matter読込
 ========================== */
 
-function formatTitle(path){
+async function loadArticleMeta(path){
 
-    return path
+    const response=
 
-    .split("/")
+        await fetch(
 
-    .pop()
+            `/posts/${path}`
 
-    .replace(".md","")
+        );
 
-    .replaceAll("-"," ");
+    const markdown=
+
+        await response.text();
+
+    const parsed=
+
+        parseFrontMatter(
+            markdown
+        );
+
+    return{
+
+        path,
+        ...parsed.attributes
+
+    };
+
+}
+
+
+/* ==========================
+   Front Matter解析
+========================== */
+
+function parseFrontMatter(markdown){
+
+    const match=
+
+        markdown.match(
+
+            /^---([\s\S]*?)---([\s\S]*)$/
+
+        );
+
+    if(!match){
+
+        return{
+
+            attributes:{}
+
+        };
+
+    }
+
+    const yaml=
+
+        match[1];
+
+    const attributes={};
+
+    yaml.split("\n")
+
+    .forEach(line=>{
+
+        const parts=
+
+            line.split(":");
+
+        if(parts.length<2){
+
+            return;
+
+        }
+
+        const key=
+
+            parts[0]
+            .trim();
+
+        const value=
+
+            parts
+            .slice(1)
+            .join(":")
+            .trim();
+
+        attributes[key]=
+            value;
+
+    });
+
+    return{
+
+        attributes
+
+    };
 
 }
