@@ -52,7 +52,7 @@ document.addEventListener(
                 ${latest.date}
             </small>
             <h3>
-                <a href="/post/?post=${latest.path}">
+                <a href="/posts/?post=${latest.path}">
                     ${latest.title}
                 </a>
             </h3>
