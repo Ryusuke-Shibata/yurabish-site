@@ -57,7 +57,7 @@ async function renderCategory(
                     ${article.date}
                 </small>
                 <h3>
-                    <a href="/post/?post=${article.path}">
+                    <a href="/posts/?post=${article.path}">
                         ${article.title}
                     </a>
                 </h3>
