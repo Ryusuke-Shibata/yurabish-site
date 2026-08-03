@@ -176,7 +176,7 @@ plugins:
       links:
         Sairy Hub: https://yurabish.com
     layout:
-      position: footer
+      position: afterBody
       priority: 50
   - source: "@quartz-community/spacer"
     enabled: true
