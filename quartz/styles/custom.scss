@@ -1,3 +1,146 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+/* ==================================================
+   0. テーマカラー定義（レトロミッドセンチュリー）
+   ================================================== */
+:root[saved-theme="light"],
+[saved-theme="light"] {
+  --light: #f7f4ed;       /* クリーム背景 */
+  --lightgray: #000000;   /* 黒枠線 */
+  --gray: #555555;        /* 補足テキスト */
+  --darkgray: #222222;    /* 見出しサブ */
+  --dark: #1a1a1a;        /* メイン文字色 */
+  --secondary: #ff5722;   /* メインアクセント：レトロオレンジ */
+  --tertiary: #2e7d32;    /* サブアクセント：セージグリーン */
+}
+
+:root[saved-theme="dark"],
+[saved-theme="dark"] {
+  --light: #1c1b18;
+  --lightgray: #ffffff;
+  --gray: #999999;
+  --darkgray: #dddddd;
+  --dark: #f7f4ed;
+  --secondary: #ff7043;
+  --tertiary: #4caf50;
+}
+
+/* ==================================================
+   1. レイアウト崩れ（はみ出し）防止 ＆ 2カラム最適化
+   ================================================== */
+/* パディングや太枠による要素のはみ出しを強制防止 */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2カラム用のメインカードエリア */
+.page .center {
+  background: var(--light) !important;
+  border: 2px solid var(--dark) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: 5px 5px 0px var(--dark) !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.article-title {
+  font-weight: 900 !important;
+  border-bottom: 3px solid var(--dark) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* ==================================================
+   2. 左サイドバー（目次・グラフ・エクスプローラー）の装飾
+   ================================================== */
+.sidebar.left {
+  gap: 1.5rem !important;
+}
+
+/* 左側に引っ越してきた「目次（ToC）」をカード風に装飾 */
+.toc {
+  border: 2px solid var(--dark) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  background: var(--light) !important;
+  box-shadow: 3px 3px 0px var(--dark) !important;
+}
+
+/* ==================================================
+   3. 見出し（H1, H2, H3）
+   ================================================== */
+/* H1: オレンジのステッカー風ブロック */
+.popover-hint h1,
+article h1,
+.center h1 {
+  background: var(--secondary) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px !important;
+  border: 2px solid var(--dark) !important;
+  box-shadow: 3px 3px 0px var(--dark) !important;
+  margin-top: 2rem !important;
+}
+
+/* H2: グリーン（tertiary）の太下線 */
+.popover-hint h2,
+article h2,
+.center h2 {
+  border-bottom: 4px solid var(--tertiary) !important;
+  padding-bottom: 0.3rem !important;
+  margin-top: 1.8rem !important;
+  color: var(--dark) !important;
+}
+
+/* H3: 頭にグリーンのアクセントマーク */
+.popover-hint h3::before,
+article h3::before,
+.center h3::before {
+  content: "✦ " !important;
+  color: var(--tertiary) !important;
+}
+
+/* ==================================================
+   4. 引用・コールアウト・コードブロック・リンク
+   ================================================== */
+.callout {
+  border: 2px solid var(--dark) !important;
+  border-radius: 8px !important;
+  box-shadow: 4px 4px 0px var(--dark) !important;
+  background: var(--light) !important;
+}
+
+blockquote {
+  border: 2px solid var(--dark) !important;
+  border-left: 6px solid var(--tertiary) !important;
+  background: rgba(46, 125, 50, 0.07) !important;
+  border-radius: 8px !important;
+  box-shadow: 3px 3px 0px var(--dark) !important;
+  padding: 1rem !important;
+}
+
+pre {
+  border: 2px solid var(--dark) !important;
+  border-radius: 8px !important;
+  box-shadow: 4px 4px 0px var(--dark) !important;
+}
+
+a.internal {
+  color: var(--dark) !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid var(--dark) !important;
+  padding: 1px 6px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  transition: all 0.15s ease !important;
+}
+
+a.internal:hover {
+  background: var(--secondary) !important;
+  color: #ffffff !important;
+  box-shadow: 2px 2px 0px var(--dark) !important;
+}

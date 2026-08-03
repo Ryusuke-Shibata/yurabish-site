@@ -16,26 +16,28 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: "Zen Kaku Gothic New"
+      body: "Noto Sans JP"
+      code: "IBM Plex Mono"
+    # ※カラーは custom.scss で完全制御するため、ビルドエラー防止用の最低限の構造のみ残しています
     colors:
       lightMode:
-        light: "#fdf6e3"
-        lightgray: "#eee8d5"
-        gray: "#93a1a1"
-        darkgray: "#586e75"
-        dark: "#073642"
-        secondary: "#b58900"
-        tertiary: "#cb4b16"
+        light: "#ffffff"
+        lightgray: "#000000"
+        gray: "#666666"
+        darkgray: "#222222"
+        dark: "#000000"
+        secondary: "#ff5722"
+        tertiary: "#2e7d32"
       darkMode:
-        light: "#002b36"
-        lightgray: "#073642"
-        gray: "#657b83"
-        darkgray: "#839496"
-        dark: "#fdf6e3"
-        secondary: "#2aa198"
-        tertiary: "#268bd2"
+        light: "#000000"
+        lightgray: "#ffffff"
+        gray: "#888888"
+        darkgray: "#cccccc"
+        dark: "#ffffff"
+        secondary: "#ff7043"
+        tertiary: "#4caf50"
+
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -67,8 +69,8 @@ plugins:
     enabled: true
     order: 50
     layout:
-      position: right
-      priority: 30
+      position: left
+      priority: 40
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -82,29 +84,10 @@ plugins:
     options:
       renderEngine: katex
     order: 80
-  - source: "@quartz-community/citations"
-    enabled: false
-    order: 85
-  - source: "@quartz-community/hard-line-breaks"
-    enabled: false
-    order: 90
-  - source: "@quartz-community/ox-hugo"
-    enabled: false
-    order: 91
-  - source: "@quartz-community/roam"
-    enabled: false
-    order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
-  - source: "@quartz-themes/core"
-    enabled: false
-    options:
-      theme: tokyo-night
-      mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
-  - source: "@quartz-community/explicit-publish"
-    enabled: false
   - source: "@quartz-community/alias-redirects"
     enabled: true
   - source: "@quartz-community/content-index"
@@ -134,8 +117,8 @@ plugins:
   - source: "@quartz-community/graph"
     enabled: true
     layout:
-      position: right
-      priority: 10
+      position: left
+      priority: 60
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -147,8 +130,8 @@ plugins:
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 10
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
@@ -160,7 +143,7 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
@@ -187,25 +170,14 @@ plugins:
       position: beforeBody
       priority: 5
       condition: not-index
-  - source: "@quartz-community/comments"
-    enabled: false
-    options:
-      provider: giscus
-      options: {}
-    layout:
-      position: afterBody
-      priority: 10
   - source: "@quartz-community/footer"
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Sairy Hub: https://yurabish.com
     layout:
       position: footer
       priority: 50
-  - source: "@quartz-community/recent-notes"
-    enabled: false
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -247,12 +219,7 @@ plugins:
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
     order: 900
-  - source: "@quartz-community/stacked-pages"
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
+
 layout:
   groups:
     toolbar:
