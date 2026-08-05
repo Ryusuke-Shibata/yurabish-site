@@ -14,7 +14,7 @@
   --dark: #1a1a1a;        /* メイン文字色 */
   --secondary: #ff5722;   /* メインアクセント：レトロオレンジ */
   --tertiary: #2e7d32;    /* サブアクセント：セージグリーン */
-  --code-bg: rgba(0, 0, 0, 0.06);
+  --code-bg: rgba(0, 0, 0, 0.06); /* インラインコード・リンク背景（黒の半透明） */
 }
 
 :root[saved-theme="dark"],
@@ -26,7 +26,7 @@
   --dark: #f7f4ed;
   --secondary: #ff7043;
   --tertiary: #4caf50;
-  --code-bg: rgba(255, 255, 255, 0.12);
+  --code-bg: rgba(255, 255, 255, 0.12); /* インラインコード・リンク背景（白の半透明） */
 }
 
 /* ==================================================
@@ -106,7 +106,7 @@ article h3::before,
 }
 
 /* ==================================================
-   4. 引用・コールアウト・コードブロック・リンク
+   4. 引用・コールアウト・コード・リンク
    ================================================== */
 .callout {
   border: 2px solid var(--dark) !important;
@@ -124,15 +124,36 @@ blockquote {
   padding: 1rem !important;
 }
 
+/* 複数行コードブロック（``` ） */
 pre {
   border: 2px solid var(--dark) !important;
   border-radius: 8px !important;
   box-shadow: 4px 4px 0px var(--dark) !important;
 }
 
+/* インラインコード（` ` で囲んだ部分）の装飾・ダーク対応 */
+code {
+  background-color: var(--code-bg) !important;
+  color: var(--secondary) !important;  /* オレンジ色で強調 */
+  border: 1px solid var(--dark) !important;
+  padding: 0.15em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: var(--codeFont) !important;
+  font-size: 0.9em !important;
+}
+
+/* 複数行コードブロック（pre）の中の code は枠線・背景を解除 */
+pre code {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+
+/* 内部リンク */
 a.internal {
   color: var(--dark) !important;
-  background: rgba(0, 0, 0, 0.06) !important;
+  background: var(--code-bg) !important;
   border: 1px solid var(--dark) !important;
   padding: 1px 6px !important;
   border-radius: 4px !important;
