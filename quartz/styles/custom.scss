@@ -167,3 +167,9 @@ a.internal:hover {
   color: #ffffff !important;
   box-shadow: 2px 2px 0px var(--dark) !important;
 }
+
+/* トップページおよび各カテゴリのindexページの日付・読了時間を非表示 */
+[data-slug="index"] .content-meta,
+[data-slug$="/index"] .content-meta {
+  display: none;
+}
