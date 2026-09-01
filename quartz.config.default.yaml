@@ -65,6 +65,8 @@ plugins:
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
     order: 40
+  - source: "@quartz-community/hard-line-breaks"
+    enabled: true
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 50
