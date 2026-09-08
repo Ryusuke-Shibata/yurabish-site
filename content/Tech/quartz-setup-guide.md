@@ -1,5 +1,7 @@
-## Quartz ＋ Obsidian でつくるSairy Hub
-
+---
+title: Quartz環境構築メモ
+date: 2026-08-20
+---
 Sairy Hubの環境構築メモです。
 Obsidianで書いたメモを Quartz で静的サイト化し、Cloudflare Pages で公開しています。
 
