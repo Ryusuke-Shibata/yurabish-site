@@ -6,6 +6,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Sairy Hub',
+      tableOfContents: false, // 右側の目次を非表示
+      pagefind: false,        // 検索バー（Search）を非表示
+      pagination: false,      // ページ下部の「前の記事 / 次の記事」リンクを非表示
+
+      // サイドバーの最小構成
       sidebar: [
         { label: 'About', slug: 'about' },
       ],
