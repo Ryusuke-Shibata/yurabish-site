@@ -1,65 +1,76 @@
-# AstroとStarlightによるWebサイト構築手順
+---
+title: Astro(+ Starlight)によるWebサイトの構築メモ
+description: Astro StarlightとCloudflare Pagesを使い、VS Code1本で執筆から自動デプロイまで完結する超軽量なWebサイト環境を構築した手順。
+---
 
-## 1. 前提条件
-以下の環境が用意されていることを確認します。
+Astro(+ Starlight)を採用し、Webサイトを構築・公開するまでの手順メモ。
 
-- Node.js(v18.14.1以上)
-- Git
-- VS Code
-- GitHubアカウント
-- Cloudflareアカウント
+## 1. サイト構成と運用方針
+
+* **SSG (Static Site Generator)**: Astro + Starlightテーマ
+* **エディタ & バージョン管理**: VS Code (ターミナル / Source Control)
+* **ホスティング**: Cloudflare Pages(完全無料)
+* **リポジトリ**: GitHub(`main`ブランチ)
+* **独自ドメイン**: `yurabish.com`
 
 ---
 
-## 2. プロジェクトの作成
-ターミナルで以下のコマンドを実行し、AstroおよびStarlightのテンプレートからプロジェクトを作成します。
+## 2. プロジェクトの新規作成
+
+作業用フォルダにてCLI コマンドを実行し、Starlight テンプレートでプロジェクトを立ち上げる。
 
 ```bash
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starlight sairy-hub
+cd sairy-hub
 ```
 
-コマンド実行時の対話プロンプトには、以下のように回答します。
-
-1. **Where should we create your new project?**: プロジェクトフォルダ名を入力(例: `my-site`)
-2. **Install dependencies?**: `Yes`
-3. **Initialize a new git repository?**: `Yes`
+### 対話プロンプト設定
+* **Install dependencies?**: `Yes`
+* **Initialize a new git repository?**: `Yes`
 
 ---
 
-## 3. ディレクトリ構成とコンテンツの配置
-作成されたプロジェクトフォルダへ移動し、VS Codeで開きます。
+## 3. コンテンツの配置とフロントマター
 
-```bash
-cd my-site
-code .
-```
+`src/content/docs/` ディレクトリ内に Markdown (`.md`) ファイルを配置する。
 
-ドキュメントファイルは`src/content/docs/`配下に格納します。初期配置のサンプルファイルを整理し、必要なMarkdownファイルを配置します。
+`src/content/docs/index.md` の記述例:
 
-### トップページファイル例(`src/content/docs/index.md`)
 ```markdown
 ---
-title: サイトタイトル
-description: サイトの概要説明
+title: Sairy Hub
+description: 思考のログと、インプットの記録を静かに残す場所。
 ---
 
-本文テキストをここに記述します。
+ちょっとずつコンテンツを足していきます。
+
+---
+
+## About
+サイトや運営者についての詳細は [About](/about) へ。
 ```
 
 ---
 
-## 4. 基本設定
-プロジェクト直下の`astro.config.mjs`を編集し、サイトの基本情報とドメインを設定します。
+## 4. 設定ファイルの超ミニマル化
+
+`astro.config.mjs` を編集し、検索バーや右側の目次（Table of Contents）、ページ送りナビなどの標準UIパーツを無効化してテキスト主体の構成にする。
 
 ```javascript
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://yurabish.com',
   integrations: [
     starlight({
-      title: 'サイトタイトル',
+      title: 'Sairy Hub',
+      // 超ミニマル化設定
+      tableOfContents: false, // 右側の目次（TOC）を非表示
+      pagefind: false,        // 検索バーを非表示
+      pagination: false,      // 前後のページ送りナビを非表示
+
+      // サイドバー構造の設定
       sidebar: [
         { label: 'About', slug: 'about' },
       ],
@@ -70,51 +81,38 @@ export default defineConfig({
 
 ---
 
-## 5. ローカルでの動作確認
-VS Codeのターミナルで開発用サーバーを起動し、表示を確認します。
+## 5. GitHub リポジトリへの接続
 
-```bash
-npm run dev
-```
+VS Code ターミナルから GitHub リポジトリにコードを送信する。
 
-ターミナルに表示されたURL(例: `http://localhost:4321`)へブラウザでアクセスして動作を確認します。確認後は`Ctrl + C`でサーバーを停止します。
-
----
-
-## 6. GitHubリポジトリへのPush
-1. GitHub上で空の新しいリポジトリを作成します。
-2. VS Codeのターミナルで以下のコマンドを実行し、コードをリモートリポジトリに送信します。
-
-```bash
-git remote add origin https://github.com/username/repository-name.git
+```powershell
+git remote add origin https://github.com/ユーザー名/リポジトリ名.git
 git branch -M main
 git add .
-git commit -m "feat: initial commit"
+git commit -m "feat: initial commit with Astro Starlight"
 git push -u origin main
 ```
 
 ---
 
-## 7. Cloudflare Pagesへのデプロイ
-1. Cloudflareダッシュボードにログインし、**Workers & Pages**を選択します。
-2. **Create application**から**Pages**を選択し、**Connect to Git**をクリックします。
-3. 対象のGitHubリポジトリを選択し、以下のビルド設定を指定します。
+## 6. Cloudflare Pages のビルド設定
 
-- **Framework preset**: `Astro`
-- **Build command**: `npm run build`
-- **Build output directory**: `dist`
+Cloudflare Pages で GitHub リポジトリと連携し、自動ビルド設定を行う。
 
-4. **Save and Deploy**を実行して本番デプロイを行います。
+### ビルド設定
+* **フレームワーク プリセット**: `Astro`
+* **ビルドコマンド**: `npm run build`
+* **出力ディレクトリ**: `dist`
+* **プロダクション ブランチ**: `main`
 
 ---
 
-## 8. 日常の運用ワークフロー
-環境構築完了後の日常的な更新手順は以下の通りです。
+## 7. 日常の執筆ワークフロー
 
-1. `src/content/docs/`配下でMarkdownファイルを編集・追加します。
-2. VS CodeのターミナルでコミットおよびPushを行います。
-   ```bash
-   git commit -am "update content"
+1. **記事作成**: VS Code で `src/content/docs/` 配下に Markdown ファイルを作成・編集。
+2. **Push**: VS Code のターミナルからコミット＆Push を実行。
+   ```powershell
+   git commit -am "add new post"
    git push
    ```
-3. Cloudflare Pagesにより、自動でビルドおよびデプロイが実行されます。
+3. **自動反映**: Cloudflare Pages が検知し、約1〜2分で本番サイトへビルド・公開される。
