@@ -1,9 +1,9 @@
 ---
-title: Astro(+ Starlight)によるWebサイトの構築メモ
-description: Astro StarlightとCloudflare Pagesを使い、VS Code1本で執筆から自動デプロイまで完結する超軽量なWebサイト環境を構築した手順。
+title: AstroによるWebサイトの構築メモ
+description: AstroとCloudflare Pagesを使い、VS Code1本で執筆から自動デプロイまで完結する超軽量なWebサイト環境を構築した手順。
 ---
 
-Astro(+ Starlight)を採用し、Webサイトを構築・公開するまでの手順メモ。
+Astroを採用し、Webサイトを構築・公開するまでの手順メモ。
 
 ## 1. サイト構成と運用方針
 

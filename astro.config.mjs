@@ -12,7 +12,12 @@ export default defineConfig({
 
       // サイドバーの最小構成
       sidebar: [
-        { label: 'About', slug: 'about' },
+        {
+          label: '記事一覧',
+          items: [
+            { autogenerate: { directory: ''} }
+          ],
+        },
       ],
     }),
   ],
