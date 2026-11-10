@@ -61,14 +61,12 @@
       background-color: var(--box-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 28px 16px;
+      padding: 36px 16px;
       margin-bottom: 24px;
-      min-height: 140px;
+      min-height: 120px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 16px;
     }
 
     .words-wrapper {
@@ -81,28 +79,21 @@
     }
 
     .word-badge {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: var(--accent-color);
       background-color: #1e293b;
       border: 1px solid var(--border-color);
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
       transition: transform 0.1s ease;
       word-break: break-all;
     }
 
     .multiply {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
       color: var(--text-sub);
-    }
-
-    .prompt-text {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      font-weight: 500;
-      line-height: 1.4;
     }
 
     .generate-btn {
@@ -142,8 +133,8 @@
         padding: 24px 16px;
       }
       .word-badge {
-        font-size: 1.15rem;
-        padding: 6px 12px;
+        font-size: 1.2rem;
+        padding: 8px 14px;
       }
     }
   </style>
@@ -152,7 +143,7 @@
 
   <div class="container">
     <h1>🎲 話題提供ジェネレーター</h1>
-    <p class="description">2つのキーワードを掛け合わせて新しい思考のネタを作ります</p>
+    <p class="description">2つの名詞をランダムにピックアップします</p>
 
     <div class="topic-display" id="topicDisplay">
       <div class="words-wrapper">
@@ -160,39 +151,39 @@
         <span class="multiply">×</span>
         <span class="word-badge" id="word2">押してね</span>
       </div>
-      <p class="prompt-text" id="promptText">どんな組み合わせが出るかな？</p>
     </div>
 
     <button class="generate-btn" id="generateBtn" onclick="generateTopic()">話題を生成する</button>
   </div>
 
   <script>
-    const words = [
-      "AI", "サウナ", "ビール", "睡眠", "宇宙", "ラーメン", "新幹線",
-      "筋トレ", "時間術", "ゲーム", "旅", "失敗談", "未来の技術",
-      "休日の過ごし方", "偏愛グッズ", "本", "映画", "お金", "人間関係",
-      "猫", "秘密", "幼少期", "コンビニ商品", "理想の部屋", "自動化",
-      "習慣", "自己投資", "思い出", "朝のルーティン", "ガジェット"
-    ];
+    let words = [];
 
-    const prompts = [
-      "について熱く語ってみよう！",
-      "を組み合わせた新しいアイデアは？",
-      "の意外な共通点を考えてみよう",
-      "をテーマに体験談やエピソードはある？",
-      "を掛け合わせた架空のサービスを作るなら？"
-    ];
+    // words.json から単語データを取得
+    async function loadWords() {
+      const btn = document.getElementById('generateBtn');
+      try {
+        const response = await fetch('./words.json');
+        if (!response.ok) throw new Error('Failed to load words.json');
+        words = await response.json();
+      } catch (error) {
+        console.error(error);
+        // フォールバック（ファイルが読み込めなかった場合の最小用単語）
+        words = ["AI", "サウナ", "ビール", "新幹線", "思考", "雑談"];
+      }
+    }
 
     function getRandom(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
     }
 
     function generateTopic() {
+      if (words.length < 2) return;
+
       const display = document.getElementById('topicDisplay');
       const btn = document.getElementById('generateBtn');
       const w1Elem = document.getElementById('word1');
       const w2Elem = document.getElementById('word2');
-      const promptElem = document.getElementById('promptText');
 
       btn.disabled = true;
       display.classList.add('shuffling');
@@ -208,19 +199,21 @@
 
           let w1 = getRandom(words);
           let w2 = getRandom(words);
-          while (w1 === w2) {
+          while (w1 === w2 && words.length > 1) {
             w2 = getRandom(words);
           }
 
           w1Elem.textContent = w1;
           w2Elem.textContent = w2;
-          promptElem.textContent = getRandom(prompts);
 
           display.classList.remove('shuffling');
           btn.disabled = false;
         }
       }, 50);
     }
+
+    // 初期化実行
+    loadWords();
   </script>
 </body>
 </html>
