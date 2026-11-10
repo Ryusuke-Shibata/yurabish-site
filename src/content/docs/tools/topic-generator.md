@@ -7,7 +7,7 @@ description: 2つのランダム名詞をピックアップして雑談や思考
 
 ## アプリ本体
 
-<iframe src="/tools/topic-generator/index.html" style="width: 100%; height: 420px; border: none; border-radius: 12px; overflow: hidden;" title="話題提供トピック・ジェネレーター"></iframe>
+<iframe src="/tools/topic-generator-app/index.html" style="width: 100%; height: 420px; border: none; border-radius: 12px; overflow: hidden;" title="話題提供トピック・ジェネレーター"></iframe>
 
 [全画面でアプリを開く](/tools/topic-generator/index.html)
 
